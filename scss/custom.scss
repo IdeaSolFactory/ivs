@@ -1,43 +1,122 @@
+@import "colors";
+
+// Buttons
+    .btn-one {
+    background-color: $primary-col;
+    }
+
+// Color overwrites
+    a {
+    color: $primary-col;
+    }
+
+    .sec-title {
+    p {
+        color: $primary-col;
+    }
+    }
+
+    .main-menu .navigation > li:hover > a,
+    .main-menu .navigation > li.current > a {
+    color: $primary-col;
+    }
+
+    .how-work-box .how-works-content ul li .text span,
+    .how-work-box .how-works-content ul li .icon span:before,
+    .footer-bottom-area .copyright-text p a {
+    color: $primary-col;
+    }
+
+// END Color overwrites
 
 // INDEX
-.header__logo{
+    .header__logo {
     object-fit: contain;
     width: 165px;
-}
+    }
+
+    .rev_slider {
+
+        > ul li {
+            .tp-bgimg {
+            position: relative;
+
+                &::after {
+                    transition: all 0.3s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0.6);
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .single-project-style1{
+        position: relative;
+
+        .single-project-link{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;                        
+        }
+
+        .img-holder{
+            width:100%;
+            height: 100%;
+            height: 300px;
+
+            >img{
+                object-fit: cover;
+                object-position: center;
+                height:100%;
+                width: 100%;
+            }
+        }
+
+        .link-box{
+            display: none !important;
+        }
+    }
 
 // About Us
-.intro-box{
-    align-items: flex-start;
-    // wha
+.intro-box {
+  align-items: flex-start;
+  // wha
 }
 
-.about-us-exposition-area{
-    position: relative;
-    display: block;
-    margin-top: 110px;
-    padding: 110px 0 50px;
-    
+.about-us-exposition-area {
+  position: relative;
+  display: block;
+  margin-top: 110px;
+  padding: 110px 0 50px;
 }
 
-.milestones-area{
+.milestones-area {
+  // .milestones-sidebar{
+  //     position: relative;
+  //     display: block;
+  //     max-width: 340px;
+  //     width: 100%;
+  //     z-index: 1;
 
-    // .milestones-sidebar{
-    //     position: relative;
-    //     display: block;
-    //     max-width: 340px;
-    //     width: 100%;
-    //     z-index: 1;
-
-    //     &::before {
-    //         content: "";
-    //         position: absolute;
-    //         top: -85px;
-    //         right: -30px;
-    //         bottom: -85px;
-    //         width: 1px;
-    //         background: #ededed;
-    //         z-index: -1;
-    //     }
-    // }
-
+  //     &::before {
+  //         content: "";
+  //         position: absolute;
+  //         top: -85px;
+  //         right: -30px;
+  //         bottom: -85px;
+  //         width: 1px;
+  //         background: #ededed;
+  //         z-index: -1;
+  //     }
+  // }
 }
