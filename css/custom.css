@@ -102,6 +102,64 @@ a {
   width: 100%;
 }
 
+.why-choose-area {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  position: relative;
+}
+
+.why-choose-area::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.why-choose-area .single-box.orangebg {
+  background-color: #F3732A;
+}
+
+.why-choose-area .single-box.orangebg .icon-holder::before {
+  background-color: #f35b2a;
+}
+
+@media (min-width: 1200px) {
+  .why-choose-area .why-choose-title {
+    height: 100%;
+    padding-bottom: 0px;
+  }
+}
+
+.why-choose-area .why-choose-title .sec-title {
+  padding-bottom: 32px;
+}
+
+.why-choose-area .why-choose-title .sec-title .title {
+  font-size: 22px;
+  line-height: 165%;
+}
+
+.why-choose-area .why-choose-title .button {
+  margin-top: 85px;
+}
+
+.why-choose-area .why-choose-title .button > a.btn-one {
+  text-transform: none;
+}
+
+.why-choose-area .icon {
+  height: 65px;
+}
+
+.why-choose-area .icon > img {
+  width: 100%;
+  max-width: 120px;
+}
+
 .testimonial-area .single-testimonial-item .quote-icon {
   background-color: #F3732A;
 }
