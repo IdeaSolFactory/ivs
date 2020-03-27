@@ -56,43 +56,73 @@
         }
     }
 
-    .recently-project-area{
+    .recently-project-area{       
 
         .single-project-style1{
+            position: relative;
+
+            .img-holder{
+                width:100%;
+                height: 100%;
+                height: 300px;
+    
+                >img{
+                    object-fit: cover;
+                    object-position: center;
+                    height:100%;
+                    width: 100%;
+                }
+            }              
+
             .link-box{
                 display: none !important;
             }
+            
+            .single-project-link{
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;                        
+            }            
         }
 
-        &.overview-style{
-            .single-project-style1{
-                position: relative;
-        
-                .single-project-link{
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 100;                        
+        &.inner-content{
+            
+            >.project-row{
+                &:not(:last-of-type){
+                    padding-bottom: 110px;
                 }
-        
+            }
+
+            .owl-stage-outer{
+                overflow: unset;
+            }
+            .owl-dots{
+                display:none !important;
+            }
+
+            .single-project-style1{
+
                 .img-holder{
-                    width:100%;
-                    height: 100%;
-                    height: 300px;
-        
-                    >img{
-                        object-fit: cover;
-                        object-position: center;
-                        height:100%;
-                        width: 100%;
-                    }
-                }       
-                
+                    transition: all .3s ease; 
+                }
+
+                .overlay-content{
+                    display: none;
+                    transition: none;
+                }                
             }
         }
+
+        
+
+        /* &.overview-style{
+            .single-project-style1{
+            }
+        } */
 
 
     }

@@ -44,15 +44,37 @@ a {
   display: block;
 }
 
+.recently-project-area {
+  /* &.overview-style{
+            .single-project-style1{
+            }
+        } */
+}
+
+.recently-project-area .single-project-style1 {
+  position: relative;
+}
+
+.recently-project-area .single-project-style1 .img-holder {
+  width: 100%;
+  height: 100%;
+  height: 300px;
+}
+
+.recently-project-area .single-project-style1 .img-holder > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
 .recently-project-area .single-project-style1 .link-box {
   display: none !important;
 }
 
-.recently-project-area.overview-style .single-project-style1 {
-  position: relative;
-}
-
-.recently-project-area.overview-style .single-project-style1 .single-project-link {
+.recently-project-area .single-project-style1 .single-project-link {
   position: absolute;
   display: block;
   top: 0;
@@ -62,19 +84,27 @@ a {
   z-index: 100;
 }
 
-.recently-project-area.overview-style .single-project-style1 .img-holder {
-  width: 100%;
-  height: 100%;
-  height: 300px;
+.recently-project-area.inner-content > .project-row:not(:last-of-type) {
+  padding-bottom: 110px;
 }
 
-.recently-project-area.overview-style .single-project-style1 .img-holder > img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  height: 100%;
-  width: 100%;
+.recently-project-area.inner-content .owl-stage-outer {
+  overflow: unset;
+}
+
+.recently-project-area.inner-content .owl-dots {
+  display: none !important;
+}
+
+.recently-project-area.inner-content .single-project-style1 .img-holder {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.recently-project-area.inner-content .single-project-style1 .overlay-content {
+  display: none;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .intro-box {
