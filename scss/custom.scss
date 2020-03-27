@@ -56,6 +56,26 @@
         }
     }
 
+//Testimonials
+.testimonial-area{
+
+    .single-testimonial-item{
+
+        .quote-icon{
+            background-color: $primary-col;
+        }
+        .client-info{
+            padding-bottom: 0;
+        }
+        .img-box{
+            display: none;
+        }
+    }
+    
+}
+
+// Recently Project
+
     .recently-project-area{       
 
         .single-project-style1{
@@ -101,7 +121,7 @@
                 overflow: unset;
             }
             .owl-dots{
-                display:none !important;
+                display: none !important;
             }
 
             .single-project-style1{
@@ -126,6 +146,43 @@
 
 
     }
+
+
+// Similar projects content
+.similar-projects-area{
+    
+    &.technology-images-area{
+        
+        .single-similar-project{
+            position: relative;
+            z-index: 1;
+
+            .img-holder{
+                transition: all .3s ease;
+
+                >img{
+                    transform: none;
+                }
+
+                &::before{
+                    display: none;
+                    content: none;
+                }
+            }
+
+            &:hover,
+            &:focus,
+            &:active{
+                z-index: 10;
+                
+                .img-holder{
+                    transform: scale(1.3);
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: .15);
+                }
+            }
+        }
+    }
+}
     
 
 // About Us
