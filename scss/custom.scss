@@ -55,6 +55,31 @@
             }
         }
     }
+// Products overview area
+.products-overview-area{
+
+    .text-holder{
+        z-index: 0;
+
+        >.icon-holder{
+            display: none;
+        }
+    }    
+
+    .img-holder{
+        position: relative;
+        overflow: hidden;
+        max-height: 250px;
+        min-height: 250px;
+
+        >img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
 
 //Testimonials
 .testimonial-area{
@@ -70,6 +95,9 @@
         .img-box{
             display: none;
         }
+    }
+    &.testimonial-index{
+        padding-bottom: 110px;
     }
     
 }
@@ -139,10 +167,14 @@
 
         
 
-        /* &.overview-style{
-            .single-project-style1{
+         &.overview-style{
+            padding-top: 70px;
+            padding-bottom: 70px;
+
+            .owl-dots{
+                display: none !important;
             }
-        } */
+        } 
 
 
     }

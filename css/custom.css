@@ -44,6 +44,28 @@ a {
   display: block;
 }
 
+.products-overview-area .text-holder {
+  z-index: 0;
+}
+
+.products-overview-area .text-holder > .icon-holder {
+  display: none;
+}
+
+.products-overview-area .img-holder {
+  position: relative;
+  overflow: hidden;
+  max-height: 250px;
+  min-height: 250px;
+}
+
+.products-overview-area .img-holder > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .testimonial-area .single-testimonial-item .quote-icon {
   background-color: #F3732A;
 }
@@ -56,11 +78,8 @@ a {
   display: none;
 }
 
-.recently-project-area {
-  /* &.overview-style{
-            .single-project-style1{
-            }
-        } */
+.testimonial-area.testimonial-index {
+  padding-bottom: 110px;
 }
 
 .recently-project-area .single-project-style1 {
@@ -117,6 +136,15 @@ a {
   display: none;
   -webkit-transition: none;
   transition: none;
+}
+
+.recently-project-area.overview-style {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.recently-project-area.overview-style .owl-dots {
+  display: none !important;
 }
 
 .similar-projects-area.technology-images-area .single-similar-project {
