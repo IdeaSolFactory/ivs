@@ -116,7 +116,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.65);
 }
 
 .why-choose-area .single-box.orangebg {
@@ -124,7 +124,35 @@ a {
 }
 
 .why-choose-area .single-box.orangebg .icon-holder::before {
-  background-color: #f35b2a;
+  background-color: #f79956;
+}
+
+.why-choose-area .single-box.orangebg .text-holder > h3 {
+  color: white;
+}
+
+.why-choose-area .single-box.whitebg .text-holder > h3 {
+  color: #F3732A;
+}
+
+.why-choose-area .single-box.whitebg .icon-holder::before {
+  background-color: #fff4ec;
+}
+
+.why-choose-area .single-box.whitebg .icon-holder span::before {
+  color: #F3732A;
+}
+
+.why-choose-area .single-box.blackbg .text-holder > h3 {
+  color: white;
+}
+
+.why-choose-area .single-box .text-holder > h3 {
+  color: #F3732A;
+}
+
+.why-choose-area .why-choose-title ul li::before {
+  color: #F3732A;
 }
 
 @media (min-width: 1200px) {
@@ -145,10 +173,16 @@ a {
 
 .why-choose-area .why-choose-title .button {
   margin-top: 85px;
+  background-color: #F3732A;
+}
+
+.why-choose-area .why-choose-title .button::before {
+  background-color: #F3732A;
 }
 
 .why-choose-area .why-choose-title .button > a.btn-one {
   text-transform: none;
+  background-color: #F3732A;
 }
 
 .why-choose-area .icon {

@@ -140,7 +140,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #000, $alpha: .8);
+        background-color: rgba($color: #FFF, $alpha: .65);
     }
 
     .single-box{
@@ -148,12 +148,48 @@
             background-color: $primary-col;
 
             .icon-holder::before{
-                background-color: #f35b2a;
+                background-color: $primary-col-accent;
+            }
+
+            .text-holder>h3{
+                color: white;
+            }
+        }
+
+        &.whitebg{
+            .text-holder>h3{
+                color: $primary-col;
+            }
+
+            .icon-holder::before{
+                background-color: $primary-col-accent-light;
+            }
+
+            .icon-holder span::before{
+                color: $primary-col;
+            }
+        }
+
+        &.blackbg{
+            .text-holder>h3{
+                color: white;
+            }
+        }
+
+        .text-holder{
+            >h3{
+                color: $primary-col;
             }
         }
     }
 
     .why-choose-title{
+
+        ul li{
+            &::before{
+                color: $primary-col;
+            }
+        }
 
         @media (min-width: 1200px){
             height: 100%;
@@ -162,19 +198,25 @@
 
         .sec-title{
 
-            padding-bottom: $padding-smaller;
+            padding-bottom: $padding-smaller;           
 
             .title{
                 font-size: $font-size-big;
-                line-height: 165%;
+                line-height: 165%;               
             }
         }
 
         .button{
             margin-top: 85px;
+            background-color: $primary-col;
+
+            &::before{
+                background-color: $primary-col;
+            }
 
             >a.btn-one{
                 text-transform: none;
+                background-color: $primary-col;
             }
         }
     }
