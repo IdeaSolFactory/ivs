@@ -316,32 +316,36 @@
 // IMAGES
 
 // Products Page
-.project-description-area.product-description-area,
-.project-info-area.product-info-area,
-.about-us-description-area{
+.project-filter li:hover .filter-text, .project-filter li.active .filter-text,
+.filter-text .count{
+    color: $primary-col !important;
+}
+    .project-description-area.product-description-area,
+    .project-info-area.product-info-area,
+    .about-us-description-area{
 
-    .img-holder{
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        height: 350px;
+        .img-holder{
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 350px;
 
-            @media (min-width: 1200px){
-                max-height: unset;
+                @media (min-width: 1200px){
+                    max-height: unset;
+                }
+
+            >img{
+                object-fit: cover;
+                object-position: center;
+                width: 100%; 
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
             }
 
-        >img{
-            object-fit: cover;
-            object-position: center;
-            width: 100%; 
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
         }
-
     }
-}
 
     .project-description-area.product-description-area{
         

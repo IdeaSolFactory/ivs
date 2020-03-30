@@ -249,6 +249,11 @@ a {
   width: 100%;
 }
 
+.project-filter li:hover .filter-text, .project-filter li.active .filter-text,
+.filter-text .count {
+  color: #F3732A !important;
+}
+
 .project-description-area.product-description-area .img-holder,
 .project-info-area.product-info-area .img-holder,
 .about-us-description-area .img-holder {
