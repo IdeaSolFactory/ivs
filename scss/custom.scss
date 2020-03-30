@@ -56,38 +56,74 @@
 
 // END Color overwrites
 
-// Navbar
-.main-header{
+// Header
 
-    .main-menu {
-        .navigation {
-            > li > ul > li {
-                > a{
-                    &:hover{
-                        color: $primary-col;
-                    }
-                    &::after{
-                        background: url("/images/icon/dropdown-menu-arrow-orange.png");
-                    }
-                }            
+    // INDEX
+    .main-header{
+        .main-menu {
+            .navigation {
+                > li > ul > li {
+                    > a{
+                        &:hover{
+                            color: $primary-col;
+                        }
+                        &::after{
+                            background: url("/images/icon/dropdown-menu-arrow-orange.png");
+                        }
+                    }            
+                }
             }
         }
-    }
 
-    .header-lower-style1{
-        .inner-content{
-            border-right: none;
+        .header-lower-style1{
+            .inner-content{
+                border-right: none;
 
-            >.header-contact-info
-            {
-                border-left: none;
-                >li:last-child{
-                    border: none;
+                >.header-contact-info
+                {
+                    border-left: none;
+                    >li:last-child{
+                        border: none;
+                    }
                 }
             }
         }
     }
-}
+    // END Index header
+
+    // Subpages header
+    .top-bar-style2{
+        background-color: $dark-col;
+
+        .top-style2-left{
+            p span::before{
+                color: $primary-col;
+            }
+        }
+        .top-style2-right{
+            .top-right-menu{
+                padding-right: 0;
+                margin-right: 0;
+                &::before{
+                    content: none;
+                }
+
+                li a{
+                    color: white;
+                }
+            }
+        }
+
+        li, p,
+        .top-style2-left li,
+        .top-style2-right li{
+            color: white;
+        }
+    }
+
+    // ENDSubpages header
+
+
 // END navbar
 
 // General Sections Formating
@@ -171,6 +207,23 @@
         }
 
     }
+
+    .technology-area{
+        .text{
+            padding-top: $padding-smaller;
+
+            >p{
+                &:not(:last-of-type){
+                    padding-bottom: $padding-text-medium;
+                }
+            }
+        }
+
+        .button{
+            padding-top: 0;
+        }
+    }
+
     
 // Products overview area
 .products-overview-area{

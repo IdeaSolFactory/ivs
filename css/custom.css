@@ -65,6 +65,33 @@ a {
   border: none;
 }
 
+.top-bar-style2 {
+  background-color: #01253E;
+}
+
+.top-bar-style2 .top-style2-left p span::before {
+  color: #F3732A;
+}
+
+.top-bar-style2 .top-style2-right .top-right-menu {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.top-bar-style2 .top-style2-right .top-right-menu::before {
+  content: none;
+}
+
+.top-bar-style2 .top-style2-right .top-right-menu li a {
+  color: white;
+}
+
+.top-bar-style2 li, .top-bar-style2 p,
+.top-bar-style2 .top-style2-left li,
+.top-bar-style2 .top-style2-right li {
+  color: white;
+}
+
 .sec-text-area .sec-text-lead {
   font-size: 17px;
   padding-bottom: 50px;
@@ -134,6 +161,18 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
   display: block;
   z-index: 5 !important;
+}
+
+.technology-area .text {
+  padding-top: 30px;
+}
+
+.technology-area .text > p:not(:last-of-type) {
+  padding-bottom: 1.2em;
+}
+
+.technology-area .button {
+  padding-top: 0;
 }
 
 .products-overview-area .text-holder {
@@ -297,7 +336,7 @@ a {
 }
 
 .why-choose-area .why-choose-title .sec-title {
-  padding-bottom: 32px;
+  padding-bottom: 30px;
 }
 
 .why-choose-area .why-choose-title .sec-title .title {
