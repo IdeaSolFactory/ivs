@@ -2,11 +2,19 @@
   background-color: #F3732A;
 }
 
+.about-style2-image-box .overlay-box .button a span:before {
+  background-color: #F3732A;
+}
+
 a {
   color: #F3732A;
 }
 
 .sec-title p {
+  color: #F3732A;
+}
+
+.about-style2-text .authorised-info .name p {
   color: #F3732A;
 }
 

@@ -6,15 +6,23 @@
     background-color: $primary-col;
     }
 
+    .about-style2-image-box .overlay-box .button a span:before{
+        background-color: $primary-col;
+    }
+
 // Color overwrites
     a {
     color: $primary-col;
     }
 
     .sec-title {
-    p {
-        color: $primary-col;
+        p {
+            color: $primary-col;
+        }
     }
+
+    .about-style2-text .authorised-info .name p{
+        color: $primary-col;
     }
 
     .main-menu .navigation > li:hover > a,
