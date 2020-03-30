@@ -41,6 +41,10 @@ a {
   color: #F3732A;
 }
 
+.how-work-box .how-works-content ul li .text h3 {
+  color: #F3732A;
+}
+
 .sec-text-area .sec-text-lead {
   font-size: 17px;
   padding-bottom: 50px;
@@ -131,7 +135,8 @@ a {
 }
 
 .project-description-area.product-description-area .img-holder,
-.project-info-area.product-info-area .img-holder {
+.project-info-area.product-info-area .img-holder,
+.about-us-description-area .img-holder {
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -140,13 +145,15 @@ a {
 
 @media (min-width: 1200px) {
   .project-description-area.product-description-area .img-holder,
-  .project-info-area.product-info-area .img-holder {
+  .project-info-area.product-info-area .img-holder,
+  .about-us-description-area .img-holder {
     max-height: unset;
   }
 }
 
 .project-description-area.product-description-area .img-holder > img,
-.project-info-area.product-info-area .img-holder > img {
+.project-info-area.product-info-area .img-holder > img,
+.about-us-description-area .img-holder > img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -160,9 +167,8 @@ a {
 }
 
 .project-description-area.product-description-area .img-holder {
-  width: 100%;
   overflow: hidden;
-  float: right;
+  float: none;
   position: relative;
 }
 
@@ -170,15 +176,13 @@ a {
   .project-description-area.product-description-area .img-holder {
     float: right;
     width: 795px;
-    max-height: unset;
     height: 540px;
   }
 }
 
 .project-info-area.product-info-area .img-holder {
-  width: 100%;
   overflow: hidden;
-  float: right;
+  float: none;
   position: relative;
 }
 
@@ -186,13 +190,26 @@ a {
   .project-info-area.product-info-area .img-holder {
     float: left;
     width: 795px;
-    max-height: unset;
     height: 540px;
   }
 }
 
 .project-info-area.product-info-area .title > span {
   display: block;
+}
+
+.about-us-description-area .img-holder {
+  overflow: hidden;
+  float: none;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .about-us-description-area .img-holder {
+    float: right;
+    width: 795px;
+    height: 540px;
+  }
 }
 
 .why-choose-area {
@@ -403,6 +420,10 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.milestones-area {
+  padding-bottom: 110px;
 }
 
 .about-us-exposition-area {

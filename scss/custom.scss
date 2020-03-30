@@ -41,13 +41,17 @@
 
     .main-menu .navigation > li:hover > a,
     .main-menu .navigation > li.current > a {
-    color: $primary-col;
+        color: $primary-col;
     }
 
     .how-work-box .how-works-content ul li .text span,
     .how-work-box .how-works-content ul li .icon span:before,
     .footer-bottom-area .copyright-text p a {
-    color: $primary-col;
+        color: $primary-col;
+    }
+
+    .how-work-box .how-works-content ul li .text h3{
+        color: $primary-col;
     }
 
 // END Color overwrites
@@ -153,9 +157,12 @@
     }
 }
 
+// IMAGES
+
 // Products Page
 .project-description-area.product-description-area,
-.project-info-area.product-info-area{
+.project-info-area.product-info-area,
+.about-us-description-area{
 
     .img-holder{
         width: 100%;
@@ -183,15 +190,13 @@
     .project-description-area.product-description-area{
         
         .img-holder{  
-            width: 100%;
             overflow: hidden;
-            float: right;
+            float: none;
             position: relative;
 
             @media (min-width: 1200px){
                 float: right;
                 width: 795px;
-                max-height: unset;
                 height: 540px;
             }           
             
@@ -200,15 +205,13 @@
 
     .project-info-area.product-info-area{
         .img-holder{  
-            width: 100%;
             overflow: hidden;
-            float: right;
+            float: none;
             position: relative;
 
                 @media (min-width: 1200px){
                     float: left;
                     width: 795px;
-                    max-height: unset;
                     height: 540px;
                 }
         }
@@ -217,6 +220,20 @@
     .project-info-area.product-info-area{
         .title>span{
             display: block;
+        }
+    }
+
+    .about-us-description-area{
+        .img-holder{  
+            overflow: hidden;
+            float: none;
+            position: relative;
+
+                @media (min-width: 1200px){
+                    float: right;
+                    width: 795px;
+                    height: 540px;
+                }
         }
     }
 
@@ -349,7 +366,6 @@
 }
 
 // Recently Project
-
     .recently-project-area{       
 
         .single-project-style1{
@@ -466,7 +482,10 @@
 // About Us
 .intro-box {
   align-items: flex-start;
-  // wha
+}
+
+.milestones-area{
+    padding-bottom: $padding-big;
 }
 
 .about-us-exposition-area {
@@ -476,23 +495,3 @@
   padding: 110px 0 50px;
 }
 
-.milestones-area {
-  // .milestones-sidebar{
-  //     position: relative;
-  //     display: block;
-  //     max-width: 340px;
-  //     width: 100%;
-  //     z-index: 1;
-
-  //     &::before {
-  //         content: "";
-  //         position: absolute;
-  //         top: -85px;
-  //         right: -30px;
-  //         bottom: -85px;
-  //         width: 1px;
-  //         background: #ededed;
-  //         z-index: -1;
-  //     }
-  // }
-}
