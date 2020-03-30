@@ -8,8 +8,13 @@
 }
 
 // Buttons
-    .btn-one {
+    .btn-one,
+    .btn-one:hover {
     background-color: $primary-col;
+    }
+
+    .btn-one:hover{
+        background-color: $primary-col !important;
     }
 
     .about-style2-image-box .overlay-box .button a span:before{
@@ -23,6 +28,14 @@
     }
 
 // Color overwrites
+
+    //ICONS
+    .icon{
+        &:hover{
+            color: $primary-col !important;
+        }
+    }
+
     a {
     color: $primary-col;
     }
@@ -65,6 +78,11 @@
 // Header
 
     // INDEX
+
+    .header-contact-info li .single-item .text h3{
+        text-transform: none;
+    }
+
     .main-header{
         .main-menu {
             .navigation {
@@ -140,6 +158,23 @@
 
 // General Sections Formating
 .sec-text-area{
+
+    .text:first-of-type{
+        padding-top: $padding-small;
+    }
+
+    .text{    
+        padding-bottom: $padding-smaller;   
+
+        >p{
+            padding-bottom: $padding-text-medium;
+        }
+    }
+
+    .lead-text{
+        font-size: $font-size-big;
+        line-height: 165%;
+    }
 
     .sec-text-lead{
         font-size: $font-size-lead;
@@ -526,7 +561,8 @@
 }
 
 // Recently Project
-    .recently-project-area{       
+    .recently-project-area{      
+        
 
         .single-project-style1{
             position: relative;
@@ -590,7 +626,7 @@
         
 
          &.overview-style{
-            padding-top: 70px;
+            padding-top: $padding-big;
             padding-bottom: 70px;
 
             .owl-dots{

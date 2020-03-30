@@ -2,8 +2,13 @@
   vertical-align: top !important;
 }
 
-.btn-one {
+.btn-one,
+.btn-one:hover {
   background-color: #F3732A;
+}
+
+.btn-one:hover {
+  background-color: #F3732A !important;
 }
 
 .about-style2-image-box .overlay-box .button a span:before {
@@ -14,6 +19,10 @@
 .scroll-to-top-style2 {
   background-color: #F3732A;
   border-color: #F3732A;
+}
+
+.icon:hover {
+  color: #F3732A !important;
 }
 
 a {
@@ -49,6 +58,10 @@ a {
 
 .how-work-box .how-works-content ul li .text h3 {
   color: #F3732A;
+}
+
+.header-contact-info li .single-item .text h3 {
+  text-transform: none;
 }
 
 .main-header .main-menu .navigation > li > ul > li > a:hover {
@@ -100,6 +113,23 @@ a {
 
 .main-header .logo-box-style2 {
   margin: 30px 0;
+}
+
+.sec-text-area .text:first-of-type {
+  padding-top: 50px;
+}
+
+.sec-text-area .text {
+  padding-bottom: 30px;
+}
+
+.sec-text-area .text > p {
+  padding-bottom: 1.2em;
+}
+
+.sec-text-area .lead-text {
+  font-size: 22px;
+  line-height: 165%;
 }
 
 .sec-text-area .sec-text-lead {
@@ -497,7 +527,7 @@ a {
 }
 
 .recently-project-area.overview-style {
-  padding-top: 70px;
+  padding-top: 110px;
   padding-bottom: 70px;
 }
 
