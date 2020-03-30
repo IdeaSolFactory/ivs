@@ -56,6 +56,40 @@
 
 // END Color overwrites
 
+// Navbar
+.main-header{
+
+    .main-menu {
+        .navigation {
+            > li > ul > li {
+                > a{
+                    &:hover{
+                        color: $primary-col;
+                    }
+                    &::after{
+                        background: url("/images/icon/dropdown-menu-arrow-orange.png");
+                    }
+                }            
+            }
+        }
+    }
+
+    .header-lower-style1{
+        .inner-content{
+            border-right: none;
+
+            >.header-contact-info
+            {
+                border-left: none;
+                >li:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+}
+// END navbar
+
 // General Sections Formating
 .sec-text-area{
 

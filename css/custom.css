@@ -45,6 +45,26 @@ a {
   color: #F3732A;
 }
 
+.main-header .main-menu .navigation > li > ul > li > a:hover {
+  color: #F3732A;
+}
+
+.main-header .main-menu .navigation > li > ul > li > a::after {
+  background: url("/images/icon/dropdown-menu-arrow-orange.png");
+}
+
+.main-header .header-lower-style1 .inner-content {
+  border-right: none;
+}
+
+.main-header .header-lower-style1 .inner-content > .header-contact-info {
+  border-left: none;
+}
+
+.main-header .header-lower-style1 .inner-content > .header-contact-info > li:last-child {
+  border: none;
+}
+
 .sec-text-area .sec-text-lead {
   font-size: 17px;
   padding-bottom: 50px;
