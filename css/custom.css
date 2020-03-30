@@ -10,6 +10,12 @@
   background-color: #F3732A;
 }
 
+.scroll-to-top,
+.scroll-to-top-style2 {
+  background-color: #F3732A;
+  border-color: #F3732A;
+}
+
 a {
   color: #F3732A;
 }
@@ -130,6 +136,36 @@ a {
   background-color: rgba(0, 0, 0, 0.6);
   display: block;
   z-index: -1;
+}
+
+.footer-area,
+.footer-area.style4 {
+  background-color: #01253E;
+}
+
+.footer-area .footer-shape-bg {
+  background: url("/images/footer/footer-shape-dark-accent.png");
+}
+
+.footer-area .footer-logo img {
+  max-height: 50px;
+}
+
+.footer-area .single-footer-widget .services-links ul li a,
+.footer-area .single-footer-widget .contact-info-box ul li p {
+  color: white;
+}
+
+.footer-area .single-footer-widget .contact-info-box ul li h6 {
+  border-bottom-color: white;
+}
+
+.footer-area .single-footer-widget > .title::before {
+  background-color: white;
+}
+
+.footer-area .single-footer-widget > .title::after {
+  background-color: white;
 }
 
 .header__logo {

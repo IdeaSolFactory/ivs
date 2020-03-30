@@ -16,6 +16,12 @@
         background-color: $primary-col;
     }
 
+    .scroll-to-top,
+    .scroll-to-top-style2{
+        background-color: $primary-col;
+        border-color: $primary-col;
+    }
+
 // Color overwrites
     a {
     color: $primary-col;
@@ -159,22 +165,63 @@
 
 }
 
-
-
 // Breadcrumb area
-.breadcrumb-area.style2{
-    &::after{
-        content: "";
-        position: absolute;
-        top: 0;
-        left:0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: .6);
-        display: block;
-        z-index: -1;
+    .breadcrumb-area.style2{
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .6);
+            display: block;
+            z-index: -1;
+        }
+    }
+// END Breadcrumb area
+
+// Footer
+.footer-area,
+.footer-area.style4{
+    background-color: $dark-col;
+}
+
+.footer-area{
+    .footer-shape-bg{
+        background: url("/images/footer/footer-shape-dark-accent.png");
+    }
+
+    .footer-logo{
+        img{
+            max-height:50px;
+        }
+    }
+
+    .single-footer-widget{
+
+        .services-links ul li a,
+        .contact-info-box ul li p{
+            color: white;
+        }
+
+        .contact-info-box ul li h6{
+            border-bottom-color: white;
+        }
+
+        >.title{
+            &::before{
+                background-color: white;
+            }
+
+            &::after{
+                background-color: white;
+            }
+        }
     }
 }
+
+// END footer
 
 // INDEX
     .header__logo {
