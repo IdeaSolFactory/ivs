@@ -1,6 +1,12 @@
 @import "colors";
 @import "sizes";
 
+
+// General positioning
+.valign-top{
+    vertical-align: top !important;
+}
+
 // Buttons
     .btn-one {
     background-color: $primary-col;
@@ -21,8 +27,16 @@
         }
     }
 
+    .breadcrumb-area .inner-content-box .title-s2 span{
+        color: $primary-col;
+    }
+
     .about-style2-text .authorised-info .name p{
         color: $primary-col;
+    }
+
+    .project-info-content .project-info-title:before{
+        background-color: $primary-col;
     }
 
     .main-menu .navigation > li:hover > a,
@@ -86,6 +100,12 @@
     .header__logo {
     object-fit: contain;
     width: 165px;
+    max-height: 30px;
+
+        @media (min-width: 768){
+            width: 165px;
+            max-height: unset;
+        }
     }
 
     .rev_slider {
@@ -132,6 +152,73 @@
         }
     }
 }
+
+// Products Page
+.project-description-area.product-description-area,
+.project-info-area.product-info-area{
+
+    .img-holder{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 350px;
+
+            @media (min-width: 1200px){
+                max-height: unset;
+            }
+
+        >img{
+            object-fit: cover;
+            object-position: center;
+            width: 100%; 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+    }
+}
+
+    .project-description-area.product-description-area{
+        
+        .img-holder{  
+            width: 100%;
+            overflow: hidden;
+            float: right;
+            position: relative;
+
+            @media (min-width: 1200px){
+                float: right;
+                width: 795px;
+                max-height: unset;
+                height: 540px;
+            }           
+            
+        }
+    }
+
+    .project-info-area.product-info-area{
+        .img-holder{  
+            width: 100%;
+            overflow: hidden;
+            float: right;
+            position: relative;
+
+                @media (min-width: 1200px){
+                    float: left;
+                    width: 795px;
+                    max-height: unset;
+                    height: 540px;
+                }
+        }
+    }
+
+    .project-info-area.product-info-area{
+        .title>span{
+            display: block;
+        }
+    }
 
 // Why Choose area
 .why-choose-area{
