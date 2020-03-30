@@ -186,6 +186,14 @@
 .footer-area.style4{
     background-color: $dark-col;
 }
+.footer-bottom-area,
+.footer-bottom-area.style3{
+    background-color: $dark-col-accent;
+
+    .copyright-text p{
+        color: white;
+    }
+}
 
 .footer-area{
     .footer-shape-bg{
@@ -201,7 +209,9 @@
     .single-footer-widget{
 
         .services-links ul li a,
-        .contact-info-box ul li p{
+        .contact-info-box ul li p,
+        .our-info-box .text p,
+        .usefull-links ul li a {
             color: white;
         }
 

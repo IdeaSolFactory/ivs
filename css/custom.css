@@ -143,6 +143,16 @@ a {
   background-color: #01253E;
 }
 
+.footer-bottom-area,
+.footer-bottom-area.style3 {
+  background-color: #09355E;
+}
+
+.footer-bottom-area .copyright-text p,
+.footer-bottom-area.style3 .copyright-text p {
+  color: white;
+}
+
 .footer-area .footer-shape-bg {
   background: url("/images/footer/footer-shape-dark-accent.png");
 }
@@ -152,7 +162,9 @@ a {
 }
 
 .footer-area .single-footer-widget .services-links ul li a,
-.footer-area .single-footer-widget .contact-info-box ul li p {
+.footer-area .single-footer-widget .contact-info-box ul li p,
+.footer-area .single-footer-widget .our-info-box .text p,
+.footer-area .single-footer-widget .usefull-links ul li a {
   color: white;
 }
 
