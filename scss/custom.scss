@@ -99,7 +99,7 @@
 
     // Subpages header
     .top-bar-style2{
-        background-color: $dark-col;
+        background-color: #27282c;
 
         .top-style2-left{
             p span::before{
@@ -184,11 +184,11 @@
 // Footer
 .footer-area,
 .footer-area.style4{
-    background-color: $dark-col;
+    background-color: #27282c;
 }
 .footer-bottom-area,
 .footer-bottom-area.style3{
-    background-color: $dark-col-accent;
+    background-color: #27282c;
 
     .copyright-text p{
         color: white;
@@ -197,7 +197,7 @@
 
 .footer-area{
     .footer-shape-bg{
-        background: url("/images/footer/footer-shape-dark-accent.png");
+        background: url("/images/footer/footer-shape.png");
     }
 
     .footer-logo{
