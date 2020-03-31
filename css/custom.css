@@ -1,6 +1,10 @@
 /*==================================================
                 GENERAL FORMATTING
 ====================================================*/
+body {
+  scroll-behavior: smooth;
+}
+
 @media (max-width: 480px) {
   .breaktext-sm {
     display: inline-block;
