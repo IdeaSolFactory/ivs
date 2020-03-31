@@ -402,21 +402,57 @@ a {
     }
 }
 
-.technology-area {
-    .text {
-        padding-top: $padding-smaller;
+// Technology Area
+    .technology-area {
+        background-color: color(darkgrey);
 
-        > p {
-            &:not(:last-of-type) {
-                padding-bottom: $padding-text-medium;
+        .about-style2-image-box{
+            >.slideInUp{
+                background-color: color(darkgrey-accent);
+            }
+
+            .overlay-box{
+                > .title{
+                    h1 { 
+                        font-size: 50px;
+                        vertical-align: middle;
+                        > span {
+                            top: -2px;
+                            line-height: 18px;
+                            vertical-align: baseline;
+                         }
+                     }
+                    
+                }
             }
         }
-    }
 
-    .button {
-        padding-top: 0;
+        .about-style2-text{
+            >.sec-title{
+                >p { color: white; }
+                >.title { color: white; }
+            }
+
+            >.text >p{
+                color: white;
+            }
+        }
+
+        .text {
+            padding-top: $padding-smaller;
+
+            > p {
+                &:not(:last-of-type) {
+                    padding-bottom: $padding-text-medium;
+                }
+            }
+        }
+
+        .button {
+            padding-top: 0;
+        }
     }
-}
+// END Technology Area
 
 // Products overview area
 .products-overview-area {
