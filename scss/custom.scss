@@ -1,6 +1,7 @@
 @import "colors";
 @import "sizes";
 @import "functions";
+@import "mixins";
 
 
 // General positioning
@@ -89,15 +90,43 @@
     .header-contact-info li .single-item .text h3{
         text-transform: none;
     }
-
+    
     .main-header{
-        .main-menu {
 
-            .logo-box-style1{
+        .header-upper-style1{
 
+            &.fixed-header{
+                .logo-box-style1{
+                    margin: 0;
 
+                    @include mqTablet{
+                        top: 20px;
+                    }
+                }
             }
 
+            .logo-box-style1 {
+                position: absolute;
+                left: 10px;
+                top: 27px;
+                margin: 0;
+                padding: 0;
+    
+                .header__logo{
+                    height: 25px;
+                }
+    
+                @include mqTablet {
+                    .header__logo{
+                        height: 35px;
+                    }
+                }
+            }
+        }
+
+        
+
+        .main-menu {
             .navigation {
                 > li > ul > li {
                     > a{

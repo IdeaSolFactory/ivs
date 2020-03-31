@@ -67,6 +67,34 @@ a {
   text-transform: none;
 }
 
+.main-header .header-upper-style1.fixed-header .logo-box-style1 {
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .header-upper-style1.fixed-header .logo-box-style1 {
+    top: 20px;
+  }
+}
+
+.main-header .header-upper-style1 .logo-box-style1 {
+  position: absolute;
+  left: 10px;
+  top: 27px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-header .header-upper-style1 .logo-box-style1 .header__logo {
+  height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .header-upper-style1 .logo-box-style1 .header__logo {
+    height: 35px;
+  }
+}
+
 .main-header .main-menu .navigation > li > ul > li > a:hover {
   color: #F3732A;
 }
@@ -150,7 +178,7 @@ a {
   margin-bottom: 1.2em;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .sec-text-area .sec-text-big {
     font-size: 22px;
   }
@@ -221,7 +249,7 @@ a {
   max-height: 30px;
 }
 
-@media (min-width: 768) {
+@media screen and (min-width: 768px) {
   .header__logo {
     width: 165px;
     max-height: unset;
@@ -297,7 +325,7 @@ a {
   height: 350px;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .project-description-area.product-description-area .img-holder,
   .project-info-area.product-info-area .img-holder,
   .about-us-description-area .img-holder {
@@ -326,7 +354,7 @@ a {
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .project-description-area.product-description-area .img-holder {
     float: right;
     width: 795px;
@@ -340,7 +368,7 @@ a {
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .project-info-area.product-info-area .img-holder {
     float: left;
     width: 795px;
@@ -358,7 +386,7 @@ a {
   position: relative;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .about-us-description-area .img-holder {
     float: right;
     width: 795px;
@@ -419,7 +447,7 @@ a {
   color: #F3732A;
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .why-choose-area .why-choose-title {
     height: 100%;
     padding-bottom: 0px;
