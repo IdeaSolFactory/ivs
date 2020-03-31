@@ -1,5 +1,12 @@
 @import 'sizes';
 
+// PSEUDO SELECTORS
+@mixin LinkSelectorStyle{
+    &:hover, &:active, &:visited{
+        @content;
+    }
+}
+
 
 // MEDIA QUERIES
 

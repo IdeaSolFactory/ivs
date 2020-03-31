@@ -63,6 +63,44 @@ a {
 /*==================================================
                         HEADER
 ====================================================*/
+.main-menu .navbar-header button.navbar-toggle {
+  background-color: #F3732A;
+  border: none;
+}
+
+@media screen and (min-width: 992px) {
+  .main-menu .navbar-collapse > .navigation > .dropdown ul {
+    width: 300px;
+    padding: 5px 10px;
+    -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.main-menu .navbar-collapse > .navigation > li:hover, .main-menu .navbar-collapse > .navigation > li:active, .main-menu .navbar-collapse > .navigation > li:visited {
+  background-color: #F3732A;
+}
+
+.main-menu .navbar-collapse > .navigation > li:hover a:hover, .main-menu .navbar-collapse > .navigation > li:hover a:active, .main-menu .navbar-collapse > .navigation > li:hover a:visited, .main-menu .navbar-collapse > .navigation > li:active a:hover, .main-menu .navbar-collapse > .navigation > li:active a:active, .main-menu .navbar-collapse > .navigation > li:active a:visited, .main-menu .navbar-collapse > .navigation > li:visited a:hover, .main-menu .navbar-collapse > .navigation > li:visited a:active, .main-menu .navbar-collapse > .navigation > li:visited a:visited {
+  background-color: #F3732A !important;
+}
+
+@media screen and (min-width: 992px) {
+  .main-menu .navbar-collapse > .navigation > li:hover a:hover, .main-menu .navbar-collapse > .navigation > li:hover a:active, .main-menu .navbar-collapse > .navigation > li:hover a:visited, .main-menu .navbar-collapse > .navigation > li:active a:hover, .main-menu .navbar-collapse > .navigation > li:active a:active, .main-menu .navbar-collapse > .navigation > li:active a:visited, .main-menu .navbar-collapse > .navigation > li:visited a:hover, .main-menu .navbar-collapse > .navigation > li:visited a:active, .main-menu .navbar-collapse > .navigation > li:visited a:visited {
+    background-color: unset !important;
+  }
+}
+
+.main-menu .navbar-collapse > .navigation > li.current > a {
+  background-color: #F3732A !important;
+}
+
+@media screen and (min-width: 992px) {
+  .main-menu .navbar-collapse > .navigation > li.current > a {
+    background-color: unset !important;
+  }
+}
+
 .header-contact-info li .single-item .text h3 {
   text-transform: none;
 }
@@ -136,7 +174,8 @@ a {
   color: white;
 }
 
-.top-bar-style2 li, .top-bar-style2 p,
+.top-bar-style2 li,
+.top-bar-style2 p,
 .top-bar-style2 .top-style2-left li,
 .top-bar-style2 .top-style2-right li {
   color: white;
@@ -144,6 +183,17 @@ a {
 
 .main-header .logo-box-style2 {
   margin: 30px 0;
+}
+
+.main-header .logo-box-style2 .header__logo {
+  height: 25px;
+  width: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header .logo-box-style2 .header__logo {
+    height: 35px;
+  }
 }
 
 /*======= END Header ===============================*/
@@ -311,7 +361,8 @@ a {
   width: 100%;
 }
 
-.project-filter li:hover .filter-text, .project-filter li.active .filter-text,
+.project-filter li:hover .filter-text,
+.project-filter li.active .filter-text,
 .filter-text .count {
   color: #F3732A !important;
 }
@@ -548,8 +599,8 @@ a {
 }
 
 .recently-project-area.inner-content .single-project-style1 .img-holder {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .recently-project-area.inner-content .single-project-style1 .overlay-content {
@@ -573,8 +624,8 @@ a {
 }
 
 .similar-projects-area.technology-images-area .single-similar-project .img-holder {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .similar-projects-area.technology-images-area .single-similar-project .img-holder > img {

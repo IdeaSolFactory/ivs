@@ -3,80 +3,79 @@
 @import "functions";
 @import "mixins";
 
-
 // General positioning
-.valign-top{
+.valign-top {
     vertical-align: top !important;
 }
 // END general positioning
 
 // Buttons
-    .btn-one,
-    .btn-one:hover {
+.btn-one,
+.btn-one:hover {
     background-color: color(primary);
-    }
+}
 
-    .btn-one:hover{
-        background-color: color(primary) !important;
-    }
+.btn-one:hover {
+    background-color: color(primary) !important;
+}
 
-    .about-style2-image-box .overlay-box .button a span:before{
-        background-color: color(primary);
-    }
+.about-style2-image-box .overlay-box .button a span:before {
+    background-color: color(primary);
+}
 
-    .scroll-to-top,
-    .scroll-to-top-style2{
-        background-color: color(primary);
-        border-color: color(primary);
-    }
+.scroll-to-top,
+.scroll-to-top-style2 {
+    background-color: color(primary);
+    border-color: color(primary);
+}
 
 // ENDButtons
 
 // Color overwrites
 
-    //ICONS
-    .icon{
-        &:hover{
-            color: color(primary) !important;
-        }
+//ICONS
+.icon {
+    &:hover {
+        color: color(primary) !important;
     }
+}
 
-    a {
+a {
     color: color(primary);
-    }
+}
 
-    .sec-title {
-        p {
-            color: color(primary);
-        }
-    }
-
-    .breadcrumb-area .inner-content-box .title-s2 span{
+.sec-title {
+    p {
         color: color(primary);
     }
+}
 
-    .about-style2-text .authorised-info .name p{
-        color: color(primary);
-    }
+.breadcrumb-area .inner-content-box .title-s2 span {
+    color: color(primary);
+}
 
-    .project-info-content .project-info-title:before{
-        background-color: color(primary);
-    }
+.about-style2-text .authorised-info .name p {
+    color: color(primary);
+}
 
-    .main-menu .navigation > li:hover > a,
-    .main-menu .navigation > li.current > a {
-        color: color(primary);
-    }
+.project-info-content .project-info-title:before {
+    background-color: color(primary);
+}
 
-    .how-work-box .how-works-content ul li .text span,
-    .how-work-box .how-works-content ul li .icon span:before,
-    .footer-bottom-area .copyright-text p a {
-        color: color(primary);
-    }
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a {
+    color: color(primary);
+}
 
-    .how-work-box .how-works-content ul li .text h3{
-        color: color(primary);
-    }
+.how-work-box .how-works-content ul li .text span,
+.how-work-box .how-works-content ul li .icon span:before,
+.footer-bottom-area .copyright-text p a {
+    color: color(primary);
+}
+
+.how-work-box .how-works-content ul li .text h3 {
+    color: color(primary);
+}
 
 // END Color overwrites
 
@@ -84,208 +83,262 @@
                         HEADER
 ====================================================*/
 
-
-    // INDEX header
-
-    .header-contact-info li .single-item .text h3{
-        text-transform: none;
-    }
-    
-    .main-header{
-
-        .header-upper-style1{
-
-            &.fixed-header{
-                .logo-box-style1{
-                    margin: 0;
-
-                    @include mqTablet{
-                        top: 20px;
-                    }
-                }
-            }
-        }
-
-        .logo-box-style1 {
-            position: absolute;
-            left: 10px;
-            top: 27px;
-            margin: 0;
-            padding: 0;
-
-            .header__logo{
-                height: 25px;
-            }
-
-            @include mqTablet {
-                .header__logo{
-                    height: 35px;
-                }
-            }
-        }
-    }
-
-        
-
+// ALL instances
     .main-menu {
-        .navigation {
-            > li > ul > li {
-                > a{
-                    &:hover{
-                        color: color(primary);
-                    }
-                    &::after{
-                        background: url("/images/icon/dropdown-menu-arrow-orange.png");
-                    }
-                }            
-            }
-        }
-    }
 
-    .header-lower-style1{
-        .inner-content{
-            border-right: none;
-
-            >.header-contact-info
-            {
-                border-left: none;
-                >li:last-child{
+        .navbar-header{
+            button{
+                &.navbar-toggle{
+                    background-color: color(primary);
                     border: none;
                 }
             }
         }
-    }
-    
-    // END Index header
 
-    // Subpages header
-    .top-bar-style2{
-        background-color: $darkgrey;
-
-        .top-style2-left{
-            p span::before{
-                color: color(primary);
-            }
-        }
-        .top-style2-right{
-            .top-right-menu{
-                padding-right: 0;
-                margin-right: 0;
-                &::before{
-                    content: none;
+        .navbar-collapse {
+            
+            > .navigation {
+                // Dropdown change
+                >.dropdown{
+                    ul{
+                        @include mqSmallScreen{
+                            width: 300px;
+                            padding: 5px 10px;
+                            box-shadow: 0 6px 15px rgba($color: #000000, $alpha: .08);
+                        }
+                    }
                 }
 
-                li a{
-                    color: white;
+                // Hover color change
+                > li {
+                    @include LinkSelectorStyle{
+                        background-color: color(primary);
+                        a {
+                            @include LinkSelectorStyle{
+                                background-color: color(primary) !important;
+                                @include mqSmallScreen {
+                                    background-color: unset !important;
+                                }
+                            }
+                        
+                        }
+
+                    }
+
+                    &.current > a {
+                        background-color: color(primary) !important;
+                        @include mqSmallScreen {
+                            background-color: unset !important;
+                        }
+                    }
                 }
             }
         }
-
-        li, p,
-        .top-style2-left li,
-        .top-style2-right li{
-            color: white;
-        }
     }
+// END aLL instances
 
-    .main-header{
-        .logo-box-style2{
-            margin: 30px 0;
-        }
-    }
+// INDEX header
 
-    // ENDSubpages header
-
-
-/*======= END Header ===============================*/
-
-// General Sections Formating
-.sec-text-area{
-
-    .text:first-of-type{
-        padding-top: $padding-small;
-    }
-
-    .text{    
-        padding-bottom: $padding-smaller;   
-
-        >p{
-            padding-bottom: $padding-text-medium;
-        }
-    }
-
-    .lead-text{
-        font-size: $font-size-big;
-        line-height: 165%;
-    }
-
-    .sec-text-lead{
-        font-size: $font-size-lead;
-        padding-bottom: $padding-small;
-    }
-    
-    .sec-text-big{
-        font-size: $font-size-body;
-        line-height: 165%;
-    
-        >p{
-            margin-bottom: $padding-text-medium;
-        }
-
-        @include mqTablet{
-            font-size: $font-size-big;
-        }
-    }
-
-    .img-holder{
-        margin-bottom: $padding-small;
-    }
-
+.header-contact-info li .single-item .text h3 {
+    text-transform: none;
 }
 
-// Breadcrumb area
-    .breadcrumb-area.style2{
-        &::after{
-            content: "";
-            position: absolute;
-            top: 0;
-            left:0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: .6);
-            display: block;
-            z-index: -1;
+.main-header {
+    .header-upper-style1 {
+        &.fixed-header {
+            .logo-box-style1 {
+                margin: 0;
+
+                @include mqTablet {
+                    top: 20px;
+                }
+            }
         }
     }
-// END Breadcrumb area
 
-// Footer
-.footer-area,
-.footer-area.style4{
-    background-color: $darkgrey;
+    .logo-box-style1 {
+        position: absolute;
+        left: 10px;
+        top: 27px;
+        margin: 0;
+        padding: 0;
+
+        .header__logo {
+            height: 25px;
+        }
+
+        @include mqTablet {
+            .header__logo {
+                height: 35px;
+            }
+        }
+    }
 }
-.footer-bottom-area,
-.footer-bottom-area.style3{
-    background-color: $darkgrey;
 
-    .copyright-text p{
+.main-menu {
+    .navigation {
+        > li > ul > li {
+            > a {
+                &:hover {
+                    color: color(primary);
+                }
+                &::after {
+                    background: url("/images/icon/dropdown-menu-arrow-orange.png");
+                }
+            }
+        }
+    }
+}
+
+.header-lower-style1 {
+    .inner-content {
+        border-right: none;
+
+        > .header-contact-info {
+            border-left: none;
+            > li:last-child {
+                border: none;
+            }
+        }
+    }
+}
+
+// END Index header
+
+// Subpages header
+.top-bar-style2 {
+    background-color: color(darkgrey);
+
+    .top-style2-left {
+        p span::before {
+            color: color(primary);
+        }
+    }
+    .top-style2-right {
+        .top-right-menu {
+            padding-right: 0;
+            margin-right: 0;
+            &::before {
+                content: none;
+            }
+
+            li a {
+                color: white;
+            }
+        }
+    }
+
+    li,
+    p,
+    .top-style2-left li,
+    .top-style2-right li {
         color: white;
     }
 }
 
-.footer-area{
-    .footer-shape-bg{
-        background: url("/images/footer/footer-shape.png");
+.main-header {
+    .logo-box-style2 {
+        margin: 30px 0;
+
+        .header__logo {
+            height: 25px;
+            width: auto;
+
+            @include mqTablet {
+                height: 35px;
+            }
+        }
+    }
+}
+
+// ENDSubpages header
+
+/*======= END Header ===============================*/
+
+// General Sections Formating
+.sec-text-area {
+    .text:first-of-type {
+        padding-top: $padding-small;
     }
 
-    .footer-logo{
-        img{
-            max-height:50px;
+    .text {
+        padding-bottom: $padding-smaller;
+
+        > p {
+            padding-bottom: $padding-text-medium;
         }
     }
 
-    .single-footer-widget{
+    .lead-text {
+        font-size: $font-size-big;
+        line-height: 165%;
+    }
 
+    .sec-text-lead {
+        font-size: $font-size-lead;
+        padding-bottom: $padding-small;
+    }
+
+    .sec-text-big {
+        font-size: $font-size-body;
+        line-height: 165%;
+
+        > p {
+            margin-bottom: $padding-text-medium;
+        }
+
+        @include mqTablet {
+            font-size: $font-size-big;
+        }
+    }
+
+    .img-holder {
+        margin-bottom: $padding-small;
+    }
+}
+
+// Breadcrumb area
+.breadcrumb-area.style2 {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        display: block;
+        z-index: -1;
+    }
+}
+// END Breadcrumb area
+
+// Footer
+.footer-area,
+.footer-area.style4 {
+    background-color: $darkgrey;
+}
+.footer-bottom-area,
+.footer-bottom-area.style3 {
+    background-color: $darkgrey;
+
+    .copyright-text p {
+        color: white;
+    }
+}
+
+.footer-area {
+    .footer-shape-bg {
+        background: url("/images/footer/footer-shape.png");
+    }
+
+    .footer-logo {
+        img {
+            max-height: 50px;
+        }
+    }
+
+    .single-footer-widget {
         .services-links ul li a,
         .contact-info-box ul li p,
         .our-info-box .text p,
@@ -293,16 +346,16 @@
             color: white;
         }
 
-        .contact-info-box ul li h6{
+        .contact-info-box ul li h6 {
             border-bottom-color: white;
         }
 
-        >.title{
-            &::before{
+        > .title {
+            &::before {
                 background-color: white;
             }
 
-            &::after{
+            &::after {
                 background-color: white;
             }
         }
@@ -312,78 +365,73 @@
 // END footer
 
 // INDEX
-    .header__logo {
+.header__logo {
     object-fit: contain;
     width: 165px;
     max-height: 30px;
 
-        @include mqTablet{
-            width: 165px;
-            max-height: unset;
-        }
+    @include mqTablet {
+        width: 165px;
+        max-height: unset;
     }
+}
 
-    .main-slider{
-
-        .rev_slider { 
-            
-            .active-revslide .bg-filter{
-                opacity: 1;
-                transition: all 1s;
-            }
-            
-            .bg-filter{
-                    opacity: 0;                
-                    transition: all 1s;
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba($color: #000000, $alpha: 0.6);
-                    display: block;
-                    z-index: 5 !important;
-            }            
+.main-slider {
+    .rev_slider {
+        .active-revslide .bg-filter {
+            opacity: 1;
+            transition: all 1s;
         }
 
+        .bg-filter {
+            opacity: 0;
+            transition: all 1s;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            display: block;
+            z-index: 5 !important;
+        }
     }
+}
 
-    .technology-area{
-        .text{
-            padding-top: $padding-smaller;
+.technology-area {
+    .text {
+        padding-top: $padding-smaller;
 
-            >p{
-                &:not(:last-of-type){
-                    padding-bottom: $padding-text-medium;
-                }
+        > p {
+            &:not(:last-of-type) {
+                padding-bottom: $padding-text-medium;
             }
         }
-
-        .button{
-            padding-top: 0;
-        }
     }
 
-    
+    .button {
+        padding-top: 0;
+    }
+}
+
 // Products overview area
-.products-overview-area{
-
-    .text-holder{
+.products-overview-area {
+    .text-holder {
         z-index: 0;
 
-        >.icon-holder{
+        > .icon-holder {
             display: none;
         }
-    }    
+    }
 
-    .img-holder{
+    .img-holder {
         position: relative;
         overflow: hidden;
         max-height: 250px;
         min-height: 250px;
 
-        >img{
+        > img {
             object-fit: cover;
             height: 100%;
             width: 100%;
@@ -394,95 +442,91 @@
 // IMAGES
 
 // Products Page
-.project-filter li:hover .filter-text, .project-filter li.active .filter-text,
-.filter-text .count{
+.project-filter li:hover .filter-text,
+.project-filter li.active .filter-text,
+.filter-text .count {
     color: color(primary) !important;
 }
-    .project-description-area.product-description-area,
-    .project-info-area.product-info-area,
-    .about-us-description-area{
+.project-description-area.product-description-area,
+.project-info-area.product-info-area,
+.about-us-description-area {
+    .img-holder {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 350px;
 
-        .img-holder{
+        @include mqMediumScreen {
+            max-height: unset;
+        }
+
+        > img {
+            object-fit: cover;
+            object-position: center;
             width: 100%;
-            position: relative;
-            overflow: hidden;
-            height: 350px;
-
-                @include mqMediumScreen{
-                    max-height: unset;
-                }
-
-            >img{
-                object-fit: cover;
-                object-position: center;
-                width: 100%; 
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
-            }
-
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
         }
     }
+}
 
-    .project-description-area.product-description-area{
-        
-        .img-holder{  
-            overflow: hidden;
-            float: none;
-            position: relative;
+.project-description-area.product-description-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
 
-            @include mqMediumScreen{
-                float: right;
-                width: 795px;
-                height: 540px;
-            }           
-            
+        @include mqMediumScreen {
+            float: right;
+            width: 795px;
+            height: 540px;
         }
     }
+}
 
-    .project-info-area.product-info-area{
-        .img-holder{  
-            overflow: hidden;
-            float: none;
-            position: relative;
+.project-info-area.product-info-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
 
-                @include mqMediumScreen{
-                    float: left;
-                    width: 795px;
-                    height: 540px;
-                }
+        @include mqMediumScreen {
+            float: left;
+            width: 795px;
+            height: 540px;
         }
     }
+}
 
-    .project-info-area.product-info-area{
-        .title>span{
-            display: block;
+.project-info-area.product-info-area {
+    .title > span {
+        display: block;
+    }
+}
+
+.about-us-description-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
+
+        @include mqMediumScreen {
+            float: right;
+            width: 795px;
+            height: 540px;
         }
     }
-
-    .about-us-description-area{
-        .img-holder{  
-            overflow: hidden;
-            float: none;
-            position: relative;
-
-                @include mqMediumScreen{
-                    float: right;
-                    width: 795px;
-                    height: 540px;
-                }
-        }
-    }
+}
 
 // Why Choose area
-.why-choose-area{
-
+.why-choose-area {
     padding-top: $padding-huge;
     padding-bottom: $padding-huge;
     position: relative;
 
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         display: block;
@@ -490,214 +534,197 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba($color: #FFF, $alpha: .65);
+        background-color: rgba($color: #fff, $alpha: 0.65);
     }
 
-    .single-box{
-        &.orangebg{
+    .single-box {
+        &.orangebg {
             background-color: color(primary);
 
-            .icon-holder::before{
+            .icon-holder::before {
                 background-color: color(primary-accent);
             }
 
-            .text-holder>h3{
+            .text-holder > h3 {
                 color: white;
             }
         }
 
-        &.whitebg{
-            .text-holder>h3{
+        &.whitebg {
+            .text-holder > h3 {
                 color: color(primary);
             }
 
-            .icon-holder::before{
+            .icon-holder::before {
                 background-color: color(primary-accent-light);
             }
 
-            .icon-holder span::before{
+            .icon-holder span::before {
                 color: color(primary);
             }
         }
 
-        &.blackbg{
-            .text-holder>h3{
+        &.blackbg {
+            .text-holder > h3 {
                 color: white;
             }
         }
 
-        .text-holder{
-            >h3{
+        .text-holder {
+            > h3 {
                 color: color(primary);
             }
         }
     }
 
-    .why-choose-title{
-
-        ul li{
-            &::before{
+    .why-choose-title {
+        ul li {
+            &::before {
                 color: color(primary);
             }
         }
 
-        @include mqMediumScreen{
+        @include mqMediumScreen {
             height: 100%;
             padding-bottom: 0px;
         }
 
-        .sec-title{
+        .sec-title {
+            padding-bottom: $padding-smaller;
 
-            padding-bottom: $padding-smaller;           
-
-            .title{
+            .title {
                 font-size: $font-size-big;
-                line-height: 165%;               
+                line-height: 165%;
             }
         }
 
-        .button{
+        .button {
             margin-top: 85px;
             background-color: color(primary);
 
-            &::before{
+            &::before {
                 background-color: color(primary);
             }
 
-            >a.btn-one{
+            > a.btn-one {
                 text-transform: none;
                 background-color: color(primary);
             }
         }
     }
 
-    .icon{        
+    .icon {
         height: 65px;
 
-        >img{
+        > img {
             width: 100%;
             max-width: 120px;
         }
     }
 }
 
-
 //Testimonials
-.testimonial-area{
-
-    .single-testimonial-item{
-
-        .quote-icon{
+.testimonial-area {
+    .single-testimonial-item {
+        .quote-icon {
             background-color: color(primary);
         }
-        .client-info{
+        .client-info {
             padding-bottom: 0;
         }
-        .img-box{
+        .img-box {
             display: none;
         }
     }
-    &.testimonial-index{
+    &.testimonial-index {
         padding-bottom: 110px;
     }
-    
 }
 
 // Recently Project
-    .recently-project-area{      
-        
+.recently-project-area {
+    .single-project-style1 {
+        position: relative;
 
-        .single-project-style1{
-            position: relative;
+        .img-holder {
+            width: 100%;
+            height: 100%;
+            height: 300px;
 
-            .img-holder{
-                width:100%;
+            > img {
+                object-fit: cover;
+                object-position: center;
                 height: 100%;
-                height: 300px;
-    
-                >img{
-                    object-fit: cover;
-                    object-position: center;
-                    height:100%;
-                    width: 100%;
-                }
-            }              
-
-            .link-box{
-                display: none !important;
-            }
-            
-            .single-project-link{
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
                 width: 100%;
-                height: 100%;
-                z-index: 100;                        
-            }            
-        }
-
-        &.inner-content{
-            
-            >.project-row{
-                &:not(:last-of-type){
-                    padding-bottom: 110px;
-                }
-            }
-
-            .owl-stage-outer{
-                overflow: unset;
-            }
-            .owl-dots{
-                display: none !important;
-            }
-
-            .single-project-style1{
-
-                .img-holder{
-                    transition: all .3s ease; 
-                }
-
-                .overlay-content{
-                    display: none;
-                    transition: none;
-                }                
             }
         }
 
-        
+        .link-box {
+            display: none !important;
+        }
 
-         &.overview-style{
-            padding-top: $padding-big;
-            padding-bottom: 70px;
-
-            .owl-dots{
-                display: none !important;
-            }
-        } 
-
-
+        .single-project-link {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
     }
 
+    &.inner-content {
+        > .project-row {
+            &:not(:last-of-type) {
+                padding-bottom: 110px;
+            }
+        }
+
+        .owl-stage-outer {
+            overflow: unset;
+        }
+        .owl-dots {
+            display: none !important;
+        }
+
+        .single-project-style1 {
+            .img-holder {
+                transition: all 0.3s ease;
+            }
+
+            .overlay-content {
+                display: none;
+                transition: none;
+            }
+        }
+    }
+
+    &.overview-style {
+        padding-top: $padding-big;
+        padding-bottom: 70px;
+
+        .owl-dots {
+            display: none !important;
+        }
+    }
+}
 
 // Similar projects content
-.similar-projects-area{
-    
-    &.technology-images-area{
-        
-        .single-similar-project{
+.similar-projects-area {
+    &.technology-images-area {
+        .single-similar-project {
             position: relative;
             z-index: 1;
 
-            .img-holder{
-                transition: all .3s ease;
+            .img-holder {
+                transition: all 0.3s ease;
 
-                >img{
+                > img {
                     transform: none;
                 }
 
-                &::before{
+                &::before {
                     display: none;
                     content: none;
                 }
@@ -705,32 +732,30 @@
 
             &:hover,
             &:focus,
-            &:active{
+            &:active {
                 z-index: 10;
-                
-                .img-holder{
+
+                .img-holder {
                     transform: scale(1.3);
-                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: .15);
+                    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.15);
                 }
             }
         }
     }
 }
-    
 
 // About Us
 .intro-box {
-  align-items: flex-start;
+    align-items: flex-start;
 }
 
-.milestones-area{
+.milestones-area {
     padding-bottom: $padding-big;
 }
 
 .about-us-exposition-area {
-  position: relative;
-  display: block;
-  margin-top: 110px;
-  padding: 110px 0 50px;
+    position: relative;
+    display: block;
+    margin-top: 110px;
+    padding: 110px 0 50px;
 }
-
