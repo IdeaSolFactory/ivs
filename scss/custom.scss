@@ -792,7 +792,55 @@ a {
 }
 
 // Similar projects content
+
+
 .similar-projects-area {
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 360px;
+        background: url(../images/footer/footer-shape.png);
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+
+    //Similar Projects Area -- General
+    .img-holder{
+        height: 265px;
+
+        &::before{
+            // Removes sliding effect
+            content: none;
+        }
+
+        >img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    // Similar Projects Area -- Subsites
+    &.similar-projects-subsite{
+        &.dark{
+            background-color: color(darkgrey-accent);
+
+            .similar-projects-content{
+                .similar-project-title > h2 { color: white }
+                .title-holder{
+                    h3, h3 > a { color: white; }
+                }
+            }
+        }
+    }
+
+    // Similar Projects Area -- Technology
     &.technology-images-area {
         .single-similar-project {
             position: relative;
@@ -824,6 +872,7 @@ a {
         }
     }
 }
+
 
 // About Us
 .intro-box {

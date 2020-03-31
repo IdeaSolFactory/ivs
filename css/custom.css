@@ -690,6 +690,50 @@ a {
   display: none !important;
 }
 
+.similar-projects-area {
+  position: relative;
+}
+
+.similar-projects-area::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 360px;
+  background: url(../images/footer/footer-shape.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: initial;
+}
+
+.similar-projects-area .img-holder {
+  height: 265px;
+}
+
+.similar-projects-area .img-holder::before {
+  content: none;
+}
+
+.similar-projects-area .img-holder > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.similar-projects-area.similar-projects-subsite.dark {
+  background-color: #1f1f23;
+}
+
+.similar-projects-area.similar-projects-subsite.dark .similar-projects-content .similar-project-title > h2 {
+  color: white;
+}
+
+.similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3, .similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3 > a {
+  color: white;
+}
+
 .similar-projects-area.technology-images-area .single-similar-project {
   position: relative;
   z-index: 1;
