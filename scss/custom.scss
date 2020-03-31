@@ -3,11 +3,39 @@
 @import "functions";
 @import "mixins";
 
-// General positioning
+/*==================================================
+                GENERAL FORMATTING
+====================================================*/
+
+    // Text Breakers
+    .breaktext-sm{
+        @media (max-width: $breakpoint-mobile){
+            display: inline-block;
+        }
+    }
+
+    .breaktext-md{
+        @include mqTablet{
+            display: inline-block;
+        }
+    }
+
+    .breaktext-lg{
+        @include mqMediumScreen{
+            display: inline-block;
+        }
+    }
+
+    .breaktext-xl{
+        @include mqLargeScreen{
+            display: inline-block;
+        }
+    }
+
 .valign-top {
     vertical-align: top !important;
 }
-// END general positioning
+/*============= END General formatting ==============*/
 
 // Buttons
 .btn-one,

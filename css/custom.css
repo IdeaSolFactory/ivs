@@ -1,7 +1,35 @@
+/*==================================================
+                GENERAL FORMATTING
+====================================================*/
+@media (max-width: 480px) {
+  .breaktext-sm {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .breaktext-md {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .breaktext-lg {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .breaktext-xl {
+    display: inline-block;
+  }
+}
+
 .valign-top {
   vertical-align: top !important;
 }
 
+/*============= END General formatting ==============*/
 .btn-one,
 .btn-one:hover {
   background-color: #F3732A;
