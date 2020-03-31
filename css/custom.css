@@ -694,19 +694,6 @@ a {
   position: relative;
 }
 
-.similar-projects-area::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 360px;
-  background: url(../images/footer/footer-shape.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: initial;
-}
-
 .similar-projects-area .img-holder {
   height: 265px;
 }
@@ -724,6 +711,19 @@ a {
 
 .similar-projects-area.similar-projects-subsite.dark {
   background-color: #1f1f23;
+}
+
+.similar-projects-area.similar-projects-subsite.dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 360px;
+  background: url(../images/footer/footer-shape.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: initial;
 }
 
 .similar-projects-area.similar-projects-subsite.dark .similar-projects-content .similar-project-title > h2 {
