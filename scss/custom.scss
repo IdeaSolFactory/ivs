@@ -104,57 +104,58 @@
                     }
                 }
             }
+        }
 
-            .logo-box-style1 {
-                position: absolute;
-                left: 10px;
-                top: 27px;
-                margin: 0;
-                padding: 0;
-    
+        .logo-box-style1 {
+            position: absolute;
+            left: 10px;
+            top: 27px;
+            margin: 0;
+            padding: 0;
+
+            .header__logo{
+                height: 25px;
+            }
+
+            @include mqTablet {
                 .header__logo{
-                    height: 25px;
-                }
-    
-                @include mqTablet {
-                    .header__logo{
-                        height: 35px;
-                    }
-                }
-            }
-        }
-
-        
-
-        .main-menu {
-            .navigation {
-                > li > ul > li {
-                    > a{
-                        &:hover{
-                            color: color(primary);
-                        }
-                        &::after{
-                            background: url("/images/icon/dropdown-menu-arrow-orange.png");
-                        }
-                    }            
-                }
-            }
-        }
-
-        .header-lower-style1{
-            .inner-content{
-                border-right: none;
-
-                >.header-contact-info
-                {
-                    border-left: none;
-                    >li:last-child{
-                        border: none;
-                    }
+                    height: 35px;
                 }
             }
         }
     }
+
+        
+
+    .main-menu {
+        .navigation {
+            > li > ul > li {
+                > a{
+                    &:hover{
+                        color: color(primary);
+                    }
+                    &::after{
+                        background: url("/images/icon/dropdown-menu-arrow-orange.png");
+                    }
+                }            
+            }
+        }
+    }
+
+    .header-lower-style1{
+        .inner-content{
+            border-right: none;
+
+            >.header-contact-info
+            {
+                border-left: none;
+                >li:last-child{
+                    border: none;
+                }
+            }
+        }
+    }
+    
     // END Index header
 
     // Subpages header
