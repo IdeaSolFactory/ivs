@@ -60,6 +60,9 @@ a {
   color: #F3732A;
 }
 
+/*==================================================
+                        HEADER
+====================================================*/
 .header-contact-info li .single-item .text h3 {
   text-transform: none;
 }
@@ -115,6 +118,7 @@ a {
   margin: 30px 0;
 }
 
+/*======= END Header ===============================*/
 .sec-text-area .text:first-of-type {
   padding-top: 50px;
 }

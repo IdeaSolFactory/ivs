@@ -1,0 +1,46 @@
+@import 'sizes';
+
+
+// MEDIA QUERIES
+
+@mixin mediaQuery($args){
+    @media screen and (min-width: $args){
+        @content;
+    }
+}
+
+@mixin mqMobile{
+    @media screen and (min-width: $breakpoint-mobile){
+        @content;
+    }
+}
+
+@mixin mqTablet{
+    @media screen and (min-width: $breakpoint-tablet){
+        @content;
+    }
+}
+
+@mixin mqSmallScreen{
+    @media screen and (min-width: $breakpoint-small-screen){
+        @content;
+    }
+}
+
+@mixin mqMediumScreen{
+    @media screen and (min-width: $breakpoint-medium-screen){
+        @content;
+    }
+}
+
+@mixin mqLargeScreen{
+    @media screen and (min-width: $breakpoint-large-screen){
+        @content;
+    }
+}
+
+@mixin mqHDScreen{
+    @media screen and (min-width: $breakpoint-hd-screen){
+        @content;
+    }
+}

@@ -1,83 +1,90 @@
 @import "colors";
 @import "sizes";
+@import "functions";
 
 
 // General positioning
 .valign-top{
     vertical-align: top !important;
 }
+// END general positioning
 
 // Buttons
     .btn-one,
     .btn-one:hover {
-    background-color: $primary-col;
+    background-color: color(primary);
     }
 
     .btn-one:hover{
-        background-color: $primary-col !important;
+        background-color: color(primary) !important;
     }
 
     .about-style2-image-box .overlay-box .button a span:before{
-        background-color: $primary-col;
+        background-color: color(primary);
     }
 
     .scroll-to-top,
     .scroll-to-top-style2{
-        background-color: $primary-col;
-        border-color: $primary-col;
+        background-color: color(primary);
+        border-color: color(primary);
     }
+
+// ENDButtons
 
 // Color overwrites
 
     //ICONS
     .icon{
         &:hover{
-            color: $primary-col !important;
+            color: color(primary) !important;
         }
     }
 
     a {
-    color: $primary-col;
+    color: color(primary);
     }
 
     .sec-title {
         p {
-            color: $primary-col;
+            color: color(primary);
         }
     }
 
     .breadcrumb-area .inner-content-box .title-s2 span{
-        color: $primary-col;
+        color: color(primary);
     }
 
     .about-style2-text .authorised-info .name p{
-        color: $primary-col;
+        color: color(primary);
     }
 
     .project-info-content .project-info-title:before{
-        background-color: $primary-col;
+        background-color: color(primary);
     }
 
     .main-menu .navigation > li:hover > a,
     .main-menu .navigation > li.current > a {
-        color: $primary-col;
+        color: color(primary);
     }
 
     .how-work-box .how-works-content ul li .text span,
     .how-work-box .how-works-content ul li .icon span:before,
     .footer-bottom-area .copyright-text p a {
-        color: $primary-col;
+        color: color(primary);
     }
 
     .how-work-box .how-works-content ul li .text h3{
-        color: $primary-col;
+        color: color(primary);
     }
 
 // END Color overwrites
 
-// Header
+/*==================================================
+                        HEADER
+====================================================*/
 
-    // INDEX
+
+    // INDEX header
 
     .header-contact-info li .single-item .text h3{
         text-transform: none;
@@ -85,11 +92,17 @@
 
     .main-header{
         .main-menu {
+
+            .logo-box-style1{
+
+
+            }
+
             .navigation {
                 > li > ul > li {
                     > a{
                         &:hover{
-                            color: $primary-col;
+                            color: color(primary);
                         }
                         &::after{
                             background: url("/images/icon/dropdown-menu-arrow-orange.png");
@@ -117,11 +130,11 @@
 
     // Subpages header
     .top-bar-style2{
-        background-color: #27282c;
+        background-color: $darkgrey;
 
         .top-style2-left{
             p span::before{
-                color: $primary-col;
+                color: color(primary);
             }
         }
         .top-style2-right{
@@ -154,7 +167,7 @@
     // ENDSubpages header
 
 
-// END navbar
+/*======= END Header ===============================*/
 
 // General Sections Formating
 .sec-text-area{
@@ -189,7 +202,7 @@
             margin-bottom: $padding-text-medium;
         }
 
-        @media (min-width: 768px){
+        @include mqTablet{
             font-size: $font-size-big;
         }
     }
@@ -219,11 +232,11 @@
 // Footer
 .footer-area,
 .footer-area.style4{
-    background-color: #27282c;
+    background-color: $darkgrey;
 }
 .footer-bottom-area,
 .footer-bottom-area.style3{
-    background-color: #27282c;
+    background-color: $darkgrey;
 
     .copyright-text p{
         color: white;
@@ -274,7 +287,7 @@
     width: 165px;
     max-height: 30px;
 
-        @media (min-width: 768){
+        @include mqTablet{
             width: 165px;
             max-height: unset;
         }
@@ -353,7 +366,7 @@
 // Products Page
 .project-filter li:hover .filter-text, .project-filter li.active .filter-text,
 .filter-text .count{
-    color: $primary-col !important;
+    color: color(primary) !important;
 }
     .project-description-area.product-description-area,
     .project-info-area.product-info-area,
@@ -365,7 +378,7 @@
             overflow: hidden;
             height: 350px;
 
-                @media (min-width: 1200px){
+                @include mqMediumScreen{
                     max-height: unset;
                 }
 
@@ -389,7 +402,7 @@
             float: none;
             position: relative;
 
-            @media (min-width: 1200px){
+            @include mqMediumScreen{
                 float: right;
                 width: 795px;
                 height: 540px;
@@ -404,7 +417,7 @@
             float: none;
             position: relative;
 
-                @media (min-width: 1200px){
+                @include mqMediumScreen{
                     float: left;
                     width: 795px;
                     height: 540px;
@@ -424,7 +437,7 @@
             float: none;
             position: relative;
 
-                @media (min-width: 1200px){
+                @include mqMediumScreen{
                     float: right;
                     width: 795px;
                     height: 540px;
@@ -452,10 +465,10 @@
 
     .single-box{
         &.orangebg{
-            background-color: $primary-col;
+            background-color: color(primary);
 
             .icon-holder::before{
-                background-color: $primary-col-accent;
+                background-color: color(primary-accent);
             }
 
             .text-holder>h3{
@@ -465,15 +478,15 @@
 
         &.whitebg{
             .text-holder>h3{
-                color: $primary-col;
+                color: color(primary);
             }
 
             .icon-holder::before{
-                background-color: $primary-col-accent-light;
+                background-color: color(primary-accent-light);
             }
 
             .icon-holder span::before{
-                color: $primary-col;
+                color: color(primary);
             }
         }
 
@@ -485,7 +498,7 @@
 
         .text-holder{
             >h3{
-                color: $primary-col;
+                color: color(primary);
             }
         }
     }
@@ -494,11 +507,11 @@
 
         ul li{
             &::before{
-                color: $primary-col;
+                color: color(primary);
             }
         }
 
-        @media (min-width: 1200px){
+        @include mqMediumScreen{
             height: 100%;
             padding-bottom: 0px;
         }
@@ -515,15 +528,15 @@
 
         .button{
             margin-top: 85px;
-            background-color: $primary-col;
+            background-color: color(primary);
 
             &::before{
-                background-color: $primary-col;
+                background-color: color(primary);
             }
 
             >a.btn-one{
                 text-transform: none;
-                background-color: $primary-col;
+                background-color: color(primary);
             }
         }
     }
@@ -545,7 +558,7 @@
     .single-testimonial-item{
 
         .quote-icon{
-            background-color: $primary-col;
+            background-color: color(primary);
         }
         .client-info{
             padding-bottom: 0;
