@@ -113,6 +113,9 @@ a {
                 > li {
                     @include LinkSelectorStyle{
                         background-color: color(primary);
+                        @include mqSmallScreen {
+                            background-color: unset !important;
+                        }
                         a {
                             @include LinkSelectorStyle{
                                 background-color: color(primary) !important;

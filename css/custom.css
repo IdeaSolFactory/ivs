@@ -81,6 +81,12 @@ a {
   background-color: #F3732A;
 }
 
+@media screen and (min-width: 992px) {
+  .main-menu .navbar-collapse > .navigation > li:hover, .main-menu .navbar-collapse > .navigation > li:active, .main-menu .navbar-collapse > .navigation > li:visited {
+    background-color: unset !important;
+  }
+}
+
 .main-menu .navbar-collapse > .navigation > li:hover a:hover, .main-menu .navbar-collapse > .navigation > li:hover a:active, .main-menu .navbar-collapse > .navigation > li:hover a:visited, .main-menu .navbar-collapse > .navigation > li:active a:hover, .main-menu .navbar-collapse > .navigation > li:active a:active, .main-menu .navbar-collapse > .navigation > li:active a:visited, .main-menu .navbar-collapse > .navigation > li:visited a:hover, .main-menu .navbar-collapse > .navigation > li:visited a:active, .main-menu .navbar-collapse > .navigation > li:visited a:visited {
   background-color: #F3732A !important;
 }
