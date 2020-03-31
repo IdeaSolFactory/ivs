@@ -333,6 +333,36 @@ a {
   z-index: 5 !important;
 }
 
+.technology-area {
+  background-color: #27282c;
+}
+
+.technology-area .about-style2-image-box > .slideInUp {
+  background-color: #1f1f23;
+}
+
+.technology-area .about-style2-image-box .overlay-box > .title h1 {
+  vertical-align: middle;
+}
+
+.technology-area .about-style2-image-box .overlay-box > .title h1 > span {
+  top: -2px;
+  line-height: 18px;
+  vertical-align: baseline;
+}
+
+.technology-area .about-style2-text > .sec-title > p {
+  color: white;
+}
+
+.technology-area .about-style2-text > .sec-title > .title {
+  color: white;
+}
+
+.technology-area .about-style2-text > .text > p {
+  color: white;
+}
+
 .technology-area .text {
   padding-top: 30px;
 }
