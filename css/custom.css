@@ -171,24 +171,28 @@ a {
   }
 }
 
+.main-header .header-lower-style1 .inner-content {
+  border-right: none;
+}
+
+.main-header .header-lower-style1 .inner-content > .header-contact-info {
+  border-left: none;
+}
+
+.main-header .header-lower-style1 .inner-content > .header-contact-info > li:last-child {
+  border: none;
+}
+
+.main-header .header-lower-style1 .inner-content > .header-contact-info > li:hover .single-item > .icon > span::before {
+  color: #F3732A !important;
+}
+
 .main-menu .navigation > li > ul > li > a:hover {
   color: #F3732A;
 }
 
 .main-menu .navigation > li > ul > li > a::after {
   background: url("/images/icon/dropdown-menu-arrow-orange.png");
-}
-
-.header-lower-style1 .inner-content {
-  border-right: none;
-}
-
-.header-lower-style1 .inner-content > .header-contact-info {
-  border-left: none;
-}
-
-.header-lower-style1 .inner-content > .header-contact-info > li:last-child {
-  border: none;
 }
 
 .top-bar-style2 {

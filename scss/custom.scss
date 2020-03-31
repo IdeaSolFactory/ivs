@@ -207,6 +207,30 @@ a {
             }
         }
     }
+
+    // HEADER LOWER SECTION
+    .header-lower-style1{
+        .inner-content {
+            border-right: none;
+    
+            > .header-contact-info {
+                border-left: none;
+                > li {
+                    &:last-child{
+                        border: none;
+                    }
+
+                    &:hover{
+                        .single-item > .icon > span::before{
+                                color: color(primary) !important;
+    
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // # END HEADER LOWER SECTION
 }
 
 .main-menu {
@@ -224,18 +248,6 @@ a {
     }
 }
 
-.header-lower-style1 {
-    .inner-content {
-        border-right: none;
-
-        > .header-contact-info {
-            border-left: none;
-            > li:last-child {
-                border: none;
-            }
-        }
-    }
-}
 
 // END Index header
 
