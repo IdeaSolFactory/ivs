@@ -444,6 +444,10 @@ a {
   background-color: white;
 }
 
+.footer-contact-info-area .single-footer-contact-info > .inner > .icon > span::before {
+  color: #F3732A;
+}
+
 .header__logo {
   -o-object-fit: contain;
      object-fit: contain;

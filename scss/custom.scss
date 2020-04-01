@@ -465,56 +465,69 @@ a {
 }
 // END Breadcrumb area
 
-// Footer
-.footer-area,
-.footer-area.style4 {
-    background-color: $darkgrey;
-}
-.footer-bottom-area,
-.footer-bottom-area.style3 {
-    background: color(darkgrey-accent);
-
-    .copyright-text p {
-        color: white;
+// Footer -- INDEX
+    .footer-area,
+    .footer-area.style4 {
+        background-color: $darkgrey;
     }
-}
+    .footer-bottom-area,
+    .footer-bottom-area.style3 {
+        background: color(darkgrey-accent);
 
-.footer-area {
-    .footer-shape-bg {
-        background: url("/images/footer/footer-shape.png");
-    }
-
-    .footer-logo {
-        img {
-            max-height: 50px;
-        }
-    }
-
-    .single-footer-widget {
-        .services-links ul li a,
-        .contact-info-box ul li p,
-        .our-info-box .text p,
-        .usefull-links ul li a {
+        .copyright-text p {
             color: white;
         }
+    }
 
-        .contact-info-box ul li h6 {
-            border-bottom-color: white;
+    .footer-area {
+        .footer-shape-bg {
+            background: url("/images/footer/footer-shape.png");
         }
 
-        > .title {
-            &::before {
-                background-color: white;
+        .footer-logo {
+            img {
+                max-height: 50px;
+            }
+        }
+
+        .single-footer-widget {
+            .services-links ul li a,
+            .contact-info-box ul li p,
+            .our-info-box .text p,
+            .usefull-links ul li a {
+                color: white;
             }
 
-            &::after {
-                background-color: white;
+            .contact-info-box ul li h6 {
+                border-bottom-color: white;
+            }
+
+            > .title {
+                &::before {
+                    background-color: white;
+                }
+
+                &::after {
+                    background-color: white;
+                }
             }
         }
     }
-}
 
-// END footer
+    // END footer -- INDEX
+
+    // Footer -- Subpages
+        .footer-contact-info-area{
+
+            // Icons
+            .single-footer-contact-info > .inner{
+                > .icon{
+                    >span::before{
+                        color: color(primary);
+                    }
+                }
+            }
+        }
 
 // INDEX
     .header__logo {
