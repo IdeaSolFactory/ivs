@@ -465,7 +465,59 @@ a {
 }
 // END Breadcrumb area
 
+// Footer -- GENERIC
+.single-footer-widget{
+
+    // Dropdown links in footer
+    .services-links,
+    .useful-links{
+
+        ul>li{
+
+            >a{
+                &::before{
+                    color: color(primary);
+                }
+
+                @include LinkSelectorReact{
+                    &::before{
+                        color: color(primary-accent);
+                    }
+                }
+            }
+
+            &.dropdown{
+
+                @include LinkSelectorReact{
+                    >ul{
+                        display: block;
+                    }
+                }
+
+                >ul{
+                    display: none;
+
+                    >li{
+                        padding-top: $padding-text-xxs;
+                        border-bottom: none;
+                        line-height: 35px;
+
+                        &:first-of-type{
+                            padding-top: $padding-text-small;
+                        }
+
+                        a::before{
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Footer -- INDEX
+
     .footer-area,
     .footer-area.style4 {
         background-color: $darkgrey;
@@ -491,6 +543,47 @@ a {
         }
 
         .single-footer-widget {
+
+            .contact-info-box{
+                > ul > li{
+                    vertical-align: middle;
+                    padding-bottom: $padding-xs;
+
+                    >.icon{
+                        vertical-align: middle;
+                        display: inline-block;
+                        width: 42px;
+                        font-size: 40px;
+                        margin-right: $padding-text-xxs;
+
+                        >span {
+                            display: block;
+
+                            &::before{
+                            color: color(darkgrey-light);
+                            opacity: 1;}
+                        }
+                    }
+                    >.text{
+                        display: inline-block;
+                        vertical-align: middle;
+                        > h6{
+                            border-bottom-width: 1px;
+                         }
+                         > p{
+                             margin-top: 4px;
+
+                             >span{
+                                 display: block;
+                                 font-size: .85em;
+                                 line-height: 100%;
+                             }
+                         }
+                    }
+                    
+                }
+            }
+
             .services-links ul li a,
             .contact-info-box ul li p,
             .our-info-box .text p,
@@ -499,21 +592,43 @@ a {
             }
 
             .contact-info-box ul li h6 {
-                border-bottom-color: white;
+                border-bottom-color: color(darkgrey-light);
             }
 
             > .title {
                 &::before {
-                    background-color: white;
+                    background-color: color(darkgrey-light);
                 }
 
                 &::after {
-                    background-color: white;
+                    background-color: color(darkgrey-light);
                 }
             }
         }
     }
 
+    .footer-bottom-area{
+        
+        .footer-interton-section{
+            display: block;
+            padding-left: 0;
+            padding-top: $padding-xs;
+
+            @include mqTablet{
+                padding-left: $padding-small;
+                padding-top: 0;
+            }
+
+            >.img-holder{
+                width: auto;
+                height: 45px;
+                >img{
+                    object-fit: contain;
+                    height: 100%;
+                }
+            }
+        }
+    }
     // END footer -- INDEX
 
     // Footer -- Subpages

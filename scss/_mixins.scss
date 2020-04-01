@@ -7,6 +7,12 @@
     }
 }
 
+@mixin LinkSelectorReact{
+    &:hover, &:active, &:focus{
+        @content;
+    }
+}
+
 
 // MEDIA QUERIES
 
