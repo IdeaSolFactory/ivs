@@ -470,7 +470,7 @@ a {
 
     // Dropdown links in footer
     .services-links,
-    .useful-links{
+    .usefull-links{
 
         ul>li{
 
@@ -611,12 +611,14 @@ a {
         
         .footer-interton-section{
             display: block;
-            padding-left: 0;
+            padding-left: $padding-xs;
+            padding-right: $padding-xs;
             padding-top: $padding-xs;
 
             @include mqTablet{
                 padding-left: $padding-small;
                 padding-top: 0;
+                padding-right: 0;
             }
 
             >.img-holder{
@@ -632,6 +634,27 @@ a {
     // END footer -- INDEX
 
     // Footer -- Subpages
+        .footer-area.style4{
+            .footer-logo >a > img{
+                max-height: 36px;
+            }
+        }    
+
+        .footer-bottom-area.style3{
+            .copyright-text{
+                display: inline-block;
+            }
+            .footer-interton-section{
+                display: inline-block;
+                text-align: center;
+                
+
+                >.img-holder{
+                    width: 100%;
+                }
+            }
+        }
+
         .footer-contact-info-area{
 
             // Icons
