@@ -238,7 +238,77 @@ a {
   }
 }
 
-/*======= END Header ===============================*/
+/*================= END Header ====================*/
+/*==================================================
+                  BREADCRUMB AREAS
+====================================================*/
+.breadcrumb-area.breadcrumb-technology {
+  background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumb-area.breadcrumb-technology {
+    background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .breadcrumb-area.breadcrumb-technology {
+    background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .breadcrumb-area.breadcrumb-technology {
+    background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+  }
+}
+
+.breadcrumb-area.breadcrumb-aboutus {
+  background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumb-area.breadcrumb-aboutus {
+    background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .breadcrumb-area.breadcrumb-aboutus {
+    background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .breadcrumb-area.breadcrumb-aboutus {
+    background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+  }
+}
+
+.breadcrumb-area.breadcrumb-references {
+  background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumb-area.breadcrumb-references {
+    background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .breadcrumb-area.breadcrumb-references {
+    background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .breadcrumb-area.breadcrumb-references {
+    background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+  }
+}
+
+/*============== END Breadcrumb area ===============*/
 .sec-text-area .text:first-of-type {
   padding-top: 50px;
 }

@@ -299,7 +299,70 @@ a {
 
 // ENDSubpages header
 
-/*======= END Header ===============================*/
+/*================= END Header ====================*/
+
+
+
+/*==================================================
+                  BREADCRUMB AREAS
+====================================================*/
+    .breadcrumb-area {
+
+        //Technology
+        &.breadcrumb-technology{
+            background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+
+            @include mqTablet{
+                background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
+            }
+
+            @include mqMediumScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
+            }
+
+            @include mqLargeScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
+            }            
+        }
+
+        //About us
+        &.breadcrumb-aboutus{
+            background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+
+            @include mqTablet{
+                background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
+            }
+
+            @include mqMediumScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
+            }
+
+            @include mqLargeScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
+            }
+        }
+
+        //References
+        &.breadcrumb-references{
+            background-image: url(/images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+
+            @include mqTablet{
+                background-image: url(/images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
+            }
+
+            @include mqMediumScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
+            }
+
+            @include mqLargeScreen{
+                background-image: url(/images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
+            }
+        }
+
+    }
+
+
+/*============== END Breadcrumb area ===============*/
 
 // General Sections Formating
 .sec-text-area {
