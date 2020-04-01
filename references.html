@@ -149,10 +149,10 @@
                 <div class="container-fluid">
                     <div class="project-carousel owl-carousel owl-theme">
                         <!--Start single project style1-->
-                        <div class="single-project-style1">
+                        <div class="single-project-style1 has-zoomable">
                             <a class="single-project-link" href="#"></a>
                             <div class="img-holder">
-                                <img src="images/projects/puskas_arena/480/FELULETSUGARZO_PUSKAS_ARENA_FTP01851-2_HD_480px.jpg"
+                                <img class="zoomable" src="images/projects/puskas_arena/480/FELULETSUGARZO_PUSKAS_ARENA_FTP01851-2_HD_480px.jpg"
                                     alt="Awesome Image">
                                 <div class="overlay-content">
                                     <div class="inner-content">
@@ -601,6 +601,33 @@
 
     <!-- thm custom script -->
     <script src="js/custom.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            Zoomable();
+
+            function Zoomable(){
+                    var zoomableOptions = {
+                        zoomableContainer: "has-zoomable",
+                        zoomableClass: "zoomable",
+                        pathToPics: "images/",
+                        picSizes: [480, 768, 1200, 1680, 1920],
+                        useBgFilter: true
+                    }
+                
+                $("." + zoomableOptions.zoomableContainer).click(function(){
+                    
+                    if( $(".has-zoomable img").hasClass("zoomable") ){
+                        $("body").append(
+                            '<div class="zoomable-image-wrapper"></div>'
+                        );
+                    }                    
+                });
+
+            }
+        });
+    </script>
 
 
 
