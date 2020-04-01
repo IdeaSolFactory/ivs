@@ -403,43 +403,43 @@ a {
 }
 
 .single-footer-widget .services-links ul > li > a::before,
-.single-footer-widget .useful-links ul > li > a::before {
+.single-footer-widget .usefull-links ul > li > a::before {
   color: #F3732A;
 }
 
 .single-footer-widget .services-links ul > li > a:hover::before, .single-footer-widget .services-links ul > li > a:active::before, .single-footer-widget .services-links ul > li > a:focus::before,
-.single-footer-widget .useful-links ul > li > a:hover::before,
-.single-footer-widget .useful-links ul > li > a:active::before,
-.single-footer-widget .useful-links ul > li > a:focus::before {
+.single-footer-widget .usefull-links ul > li > a:hover::before,
+.single-footer-widget .usefull-links ul > li > a:active::before,
+.single-footer-widget .usefull-links ul > li > a:focus::before {
   color: #f79956;
 }
 
 .single-footer-widget .services-links ul > li.dropdown:hover > ul, .single-footer-widget .services-links ul > li.dropdown:active > ul, .single-footer-widget .services-links ul > li.dropdown:focus > ul,
-.single-footer-widget .useful-links ul > li.dropdown:hover > ul,
-.single-footer-widget .useful-links ul > li.dropdown:active > ul,
-.single-footer-widget .useful-links ul > li.dropdown:focus > ul {
+.single-footer-widget .usefull-links ul > li.dropdown:hover > ul,
+.single-footer-widget .usefull-links ul > li.dropdown:active > ul,
+.single-footer-widget .usefull-links ul > li.dropdown:focus > ul {
   display: block;
 }
 
 .single-footer-widget .services-links ul > li.dropdown > ul,
-.single-footer-widget .useful-links ul > li.dropdown > ul {
+.single-footer-widget .usefull-links ul > li.dropdown > ul {
   display: none;
 }
 
 .single-footer-widget .services-links ul > li.dropdown > ul > li,
-.single-footer-widget .useful-links ul > li.dropdown > ul > li {
+.single-footer-widget .usefull-links ul > li.dropdown > ul > li {
   padding-top: 0.2em;
   border-bottom: none;
   line-height: 35px;
 }
 
 .single-footer-widget .services-links ul > li.dropdown > ul > li:first-of-type,
-.single-footer-widget .useful-links ul > li.dropdown > ul > li:first-of-type {
+.single-footer-widget .usefull-links ul > li.dropdown > ul > li:first-of-type {
   padding-top: 0.85em;
 }
 
 .single-footer-widget .services-links ul > li.dropdown > ul > li a::before,
-.single-footer-widget .useful-links ul > li.dropdown > ul > li a::before {
+.single-footer-widget .usefull-links ul > li.dropdown > ul > li a::before {
   content: none;
 }
 
@@ -528,7 +528,8 @@ a {
 
 .footer-bottom-area .footer-interton-section {
   display: block;
-  padding-left: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 15px;
 }
 
@@ -536,6 +537,7 @@ a {
   .footer-bottom-area .footer-interton-section {
     padding-left: 50px;
     padding-top: 0;
+    padding-right: 0;
   }
 }
 
@@ -548,6 +550,19 @@ a {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
+}
+
+.footer-bottom-area.style3 .copyright-text {
+  display: inline-block;
+}
+
+.footer-bottom-area.style3 .footer-interton-section {
+  display: inline-block;
+  text-align: center;
+}
+
+.footer-bottom-area.style3 .footer-interton-section > .img-holder {
+  width: 100%;
 }
 
 .footer-contact-info-area .single-footer-contact-info > .inner > .icon > span::before {
