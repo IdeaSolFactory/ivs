@@ -373,6 +373,10 @@ a {
   }
 }
 
+.project-description-area .bottpm-text > p:last-of-type {
+  margin-bottom: 0;
+}
+
 .sec-text-area .text:first-of-type {
   padding-top: 50px;
 }
@@ -546,7 +550,7 @@ a {
 
 .footer-area .single-footer-widget .contact-info-box > ul > li > .text > p > span {
   display: block;
-  font-size: .85em;
+  font-size: 0.85em;
   line-height: 100%;
 }
 
@@ -1041,7 +1045,8 @@ a {
   color: white;
 }
 
-.similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3, .similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3 > a {
+.similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3,
+.similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3 > a {
   color: white;
 }
 
@@ -1097,7 +1102,68 @@ a {
 }
 
 .milestones-area {
-  padding-bottom: 110px;
+  padding: 30px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .milestones-area {
+    padding: 50px 75px;
+  }
+}
+
+.milestones-area .milestones-box {
+  position: relative;
+  display: block;
+}
+
+.milestones-area .milestones-box .milestones-title {
+  padding-bottom: 30px;
+}
+
+.milestones-area .milestones-box .milestones-content {
+  position: relative;
+  display: block;
+}
+
+.milestones-area .milestones-box .milestones-content ul {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.milestones-area .milestones-box .milestones-content ul li {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 26px;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .icon {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .icon > span {
+  color: #F3732A;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .icon > span::before {
+  font-size: 20px;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .text {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .text h3 {
+  color: #F3732A;
+}
+
+.milestones-area .milestones-box .milestones-content ul li .text p {
+  margin: 0;
 }
 
 .about-us-exposition-area {

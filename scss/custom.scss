@@ -6,91 +6,90 @@
 /*==================================================
                 GENERAL FORMATTING
 ====================================================*/
-body{
+body {
     scroll-behavior: smooth;
 }
 
-    // TEXT
+// TEXT
 
-        // Text transforms
-        strong{
-            color: color(darkgrey-light);
-        }
-        strong.style2{
-            color: color(primary);
-        }
+// Text transforms
+strong {
+    color: color(darkgrey-light);
+}
+strong.style2 {
+    color: color(primary);
+}
 
-        // DropCaps
-        .dropcap{
-            color: color(primary);
-            float: left;
-            font-size: 85px;
-            line-height: 70px;
-            padding-bottom: 0;
-            padding-top: 6px;
-            padding-right: 2px;
-            font-weight: 500;
+// DropCaps
+.dropcap {
+    color: color(primary);
+    float: left;
+    font-size: 85px;
+    line-height: 70px;
+    padding-bottom: 0;
+    padding-top: 6px;
+    padding-right: 2px;
+    font-weight: 500;
 
-            @include mqSmallScreen{
-                font-size: $font-size-xxl;
-                line-height: $font-size-xxl - 25px;
-                padding-bottom: 0;
-                padding-top: 2px;
+    @include mqSmallScreen {
+        font-size: $font-size-xxl;
+        line-height: $font-size-xxl - 25px;
+        padding-bottom: 0;
+        padding-top: 2px;
+    }
+}
+
+// Text Breakers
+.breaktext-sm {
+    @media (max-width: $breakpoint-mobile) {
+        display: inline-block;
+    }
+}
+
+.breaktext-md {
+    @include mqTablet {
+        display: inline-block;
+    }
+}
+
+.breaktext-lg {
+    @include mqMediumScreen {
+        display: inline-block;
+    }
+}
+
+.breaktext-xl {
+    @include mqLargeScreen {
+        display: inline-block;
+    }
+}
+
+// Alignment
+.valign-top {
+    vertical-align: top !important;
+}
+
+// 2 Column sections
+.two-column-section {
+    position: relative;
+    display: block;
+    padding-top: $padding-smaller;
+    padding-bottom: $padding-smaller;
+
+    @include mqSmallScreen {
+        padding: $padding-medium 0;
+    }
+
+    > .two-column-section-item {
+        &:not(:first-of-type) {
+            padding-top: $padding-small;
+
+            @include mqSmallScreen {
+                padding-top: $padding-medium;
             }
         }
-
-    // Text Breakers
-    .breaktext-sm{
-        @media (max-width: $breakpoint-mobile){
-            display: inline-block;
-        }
     }
-
-    .breaktext-md{
-        @include mqTablet{
-            display: inline-block;
-        }
-    }
-
-    .breaktext-lg{
-        @include mqMediumScreen{
-            display: inline-block;
-        }
-    }
-
-    .breaktext-xl{
-        @include mqLargeScreen{
-            display: inline-block;
-        }
-    }
-
-    // Alignment
-    .valign-top {
-        vertical-align: top !important;
-    }
-
-    // 2 Column sections
-    .two-column-section{
-        position: relative;
-        display: block;
-        padding-top: $padding-smaller;
-        padding-bottom: $padding-smaller;
-
-        @include mqSmallScreen{
-            padding: $padding-medium 0;
-        }
-
-        >.two-column-section-item{
-            &:not(:first-of-type){
-                padding-top: $padding-small;
-
-                @include mqSmallScreen{
-                    padding-top: $padding-medium;
-                }
-            }
-        }
-       
-    }
+}
 
 /*============= END General formatting ==============*/
 
@@ -169,60 +168,56 @@ a {
 ====================================================*/
 
 // ALL instances
-    .main-menu {
-
-        .navbar-header{
-            button{
-                &.navbar-toggle{
-                    background-color: color(primary);
-                    border: none;
-                }
+.main-menu {
+    .navbar-header {
+        button {
+            &.navbar-toggle {
+                background-color: color(primary);
+                border: none;
             }
         }
+    }
 
-        .navbar-collapse {
-            
-            > .navigation {
-                // Dropdown change
-                >.dropdown{
-                    ul{
-                        @include mqSmallScreen{
-                            width: 300px;
-                            padding: 5px 10px;
-                            box-shadow: 0 6px 15px rgba($color: #000000, $alpha: .08);
+    .navbar-collapse {
+        > .navigation {
+            // Dropdown change
+            > .dropdown {
+                ul {
+                    @include mqSmallScreen {
+                        width: 300px;
+                        padding: 5px 10px;
+                        box-shadow: 0 6px 15px rgba($color: #000000, $alpha: 0.08);
+                    }
+                }
+            }
+
+            // Hover color change
+            > li {
+                @include LinkSelectorStyle {
+                    background-color: color(primary);
+                    @include mqSmallScreen {
+                        background-color: unset !important;
+                    }
+                    a {
+                        @include LinkSelectorStyle {
+                            background-color: color(primary) !important;
+                            @include mqSmallScreen {
+                                background-color: unset !important;
+                            }
                         }
                     }
                 }
 
-                // Hover color change
-                > li {
-                    @include LinkSelectorStyle{
-                        background-color: color(primary);
-                        @include mqSmallScreen {
-                            background-color: unset !important;
-                        }
-                        a {
-                            @include LinkSelectorStyle{
-                                background-color: color(primary) !important;
-                                @include mqSmallScreen {
-                                    background-color: unset !important;
-                                }
-                            }
-                        
-                        }
-
-                    }
-
-                    &.current > a {
-                        background-color: color(primary) !important;
-                        @include mqSmallScreen {
-                            background-color: unset !important;
-                        }
+                &.current > a {
+                    background-color: color(primary) !important;
+                    @include mqSmallScreen {
+                        background-color: unset !important;
                     }
                 }
             }
         }
     }
+}
 // END aLL instances
 
 // INDEX header
@@ -263,21 +258,20 @@ a {
     }
 
     // HEADER LOWER SECTION
-    .header-lower-style1{
+    .header-lower-style1 {
         .inner-content {
             border-right: none;
-    
+
             > .header-contact-info {
                 border-left: none;
                 > li {
-                    &:last-child{
+                    &:last-child {
                         border: none;
                     }
 
-                    &:hover{
-                        .single-item > .icon > span::before{
-                                color: color(primary) !important;
-    
+                    &:hover {
+                        .single-item > .icon > span::before {
+                            color: color(primary) !important;
                         }
                     }
                 }
@@ -301,7 +295,6 @@ a {
         }
     }
 }
-
 
 // END Index header
 
@@ -355,66 +348,61 @@ a {
 
 /*================= END Header ====================*/
 
-
-
 /*==================================================
                   BREADCRUMB AREAS
 ====================================================*/
-    .breadcrumb-area {
+.breadcrumb-area {
+    //Technology
+    &.breadcrumb-technology {
+        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
 
-        //Technology
-        &.breadcrumb-technology{
-            background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
-
-            @include mqTablet{
-                background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
-            }
-
-            @include mqMediumScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
-            }
-
-            @include mqLargeScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
-            }            
+        @include mqTablet {
+            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
         }
 
-        //About us
-        &.breadcrumb-aboutus{
-            background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
-
-            @include mqTablet{
-                background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
-            }
-
-            @include mqMediumScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
-            }
-
-            @include mqLargeScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
-            }
+        @include mqMediumScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
         }
 
-        //References
-        &.breadcrumb-references{
-            background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
-
-            @include mqTablet{
-                background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg); 
-            }
-
-            @include mqMediumScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg); 
-            }
-
-            @include mqLargeScreen{
-                background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg); 
-            }
+        @include mqLargeScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
         }
-
     }
 
+    //About us
+    &.breadcrumb-aboutus {
+        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+
+        @include mqTablet {
+            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+        }
+
+        @include mqMediumScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+        }
+
+        @include mqLargeScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+        }
+    }
+
+    //References
+    &.breadcrumb-references {
+        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+
+        @include mqTablet {
+            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+        }
+
+        @include mqMediumScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+        }
+
+        @include mqLargeScreen {
+            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+        }
+    }
+}
 
 /*============== END Breadcrumb area ===============*/
 
@@ -422,15 +410,20 @@ a {
             GENERAL SECTION FORMATTING
 ====================================================*/
 
-    // Project Description Area
-    .project-description-area{
-        padding-bottom: $padding-smaller;
-        
-        @include mqSmallScreen{
-            padding-bottom: $padding-medium;
-        }
-       
+// Project Description Area
+.project-description-area {
+    padding-bottom: $padding-smaller;
+
+    @include mqSmallScreen {
+        padding-bottom: $padding-medium;
     }
+
+    .bottpm-text{
+        >p:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+}
 
 .sec-text-area {
     .text:first-of-type {
@@ -438,21 +431,21 @@ a {
     }
 
     .text {
-        &:not(:last-of-type){
+        &:not(:last-of-type) {
             padding-bottom: $padding-smaller;
-        }        
+        }
 
         > p {
             font-size: $font-size-body;
-                @include mqSmallScreen{
-                    font-size: $font-size-lead;
-                }
-            &:not(:last-child){
+            @include mqSmallScreen {
+                font-size: $font-size-lead;
+            }
+            &:not(:last-child) {
                 padding-bottom: $padding-text-medium;
             }
         }
 
-        .img-holder{
+        .img-holder {
             margin-bottom: 0;
             padding-bottom: $padding-text-medium;
         }
@@ -463,7 +456,7 @@ a {
         line-height: 165%;
     }
 
-    .sec-title{
+    .sec-title {
         padding-bottom: $padding-text-medium;
     }
 
@@ -508,47 +501,43 @@ a {
 // END Breadcrumb area
 
 // Footer -- GENERIC
-.single-footer-widget{
-
+.single-footer-widget {
     // Dropdown links in footer
     .services-links,
-    .usefull-links{
-
-        ul>li{
-
-            >a{
-                &::before{
+    .usefull-links {
+        ul > li {
+            > a {
+                &::before {
                     color: color(primary);
                 }
 
-                @include LinkSelectorReact{
-                    &::before{
+                @include LinkSelectorReact {
+                    &::before {
                         color: color(primary-accent);
                     }
                 }
             }
 
-            &.dropdown{
-
-                @include LinkSelectorReact{
-                    >ul{
+            &.dropdown {
+                @include LinkSelectorReact {
+                    > ul {
                         display: block;
                     }
                 }
 
-                >ul{
+                > ul {
                     display: none;
 
-                    >li{
+                    > li {
                         padding-top: $padding-text-xxs;
                         border-bottom: none;
                         line-height: 35px;
 
-                        &:first-of-type{
+                        &:first-of-type {
                             padding-top: $padding-text-small;
                         }
 
-                        a::before{
+                        a::before {
                             content: none;
                         }
                     }
@@ -560,550 +549,549 @@ a {
 
 // Footer -- INDEX
 
-    .footer-area,
-    .footer-area.style4 {
-        background-color: $darkgrey;
-    }
-    .footer-bottom-area,
-    .footer-bottom-area.style3 {
-        background: color(darkgrey-accent);
+.footer-area,
+.footer-area.style4 {
+    background-color: $darkgrey;
+}
+.footer-bottom-area,
+.footer-bottom-area.style3 {
+    background: color(darkgrey-accent);
 
-        .copyright-text p {
+    .copyright-text p {
+        color: white;
+    }
+}
+
+.footer-area {
+    .footer-shape-bg {
+        background: url("/images/footer/footer-shape.png");
+    }
+
+    .footer-logo {
+        img {
+            max-height: 50px;
+        }
+    }
+
+    .single-footer-widget {
+        .contact-info-box {
+            > ul > li {
+                vertical-align: middle;
+                padding-bottom: $padding-xs;
+
+                > .icon {
+                    vertical-align: middle;
+                    display: inline-block;
+                    width: 42px;
+                    font-size: 40px;
+                    margin-right: $padding-text-xxs;
+
+                    > span {
+                        display: block;
+
+                        &::before {
+                            color: color(darkgrey-light);
+                            opacity: 1;
+                        }
+                    }
+                }
+                > .text {
+                    display: inline-block;
+                    vertical-align: middle;
+                    > h6 {
+                        border-bottom-width: 1px;
+                    }
+                    > p {
+                        margin-top: 4px;
+
+                        > span {
+                            display: block;
+                            font-size: 0.85em;
+                            line-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .services-links ul li a,
+        .contact-info-box ul li p,
+        .our-info-box .text p,
+        .usefull-links ul li a {
+            color: white;
+        }
+
+        .contact-info-box ul li h6 {
+            border-bottom-color: color(darkgrey-light);
+        }
+
+        > .title {
+            &::before {
+                background-color: color(darkgrey-light);
+            }
+
+            &::after {
+                background-color: color(darkgrey-light);
+            }
+        }
+    }
+}
+
+.footer-bottom-area {
+    .footer-interton-section {
+        display: block;
+        padding-left: $padding-xs;
+        padding-right: $padding-xs;
+        padding-top: $padding-xs;
+
+        @include mqTablet {
+            padding-left: $padding-small;
+            padding-top: 0;
+            padding-right: 0;
+        }
+
+        > .img-holder {
+            width: auto;
+            height: 45px;
+            > img {
+                object-fit: contain;
+                height: 100%;
+            }
+        }
+    }
+}
+// END footer -- INDEX
+
+// Footer -- Subpages
+.footer-area.style4 {
+    .footer-logo > a > img {
+        max-height: 36px;
+    }
+}
+
+.footer-bottom-area.style3 {
+    .copyright-text {
+        display: inline-block;
+    }
+    .footer-interton-section {
+        display: inline-block;
+        text-align: center;
+
+        > .img-holder {
+            width: 100%;
+        }
+    }
+}
+
+.footer-contact-info-area {
+    // Icons
+    .single-footer-contact-info > .inner {
+        > .icon {
+            > span::before {
+                color: color(primary);
+            }
+        }
+    }
+}
+
+// INDEX
+.header__logo {
+    object-fit: contain;
+    width: 165px;
+    max-height: 30px;
+
+    @include mqTablet {
+        width: 165px;
+        max-height: unset;
+    }
+}
+
+.main-slider {
+    .rev_slider {
+        .active-revslide .bg-filter {
+            opacity: 1;
+            transition: all 1s;
+        }
+
+        .bg-filter {
+            opacity: 0;
+            transition: all 1s;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            display: block;
+            z-index: 5 !important;
+        }
+    }
+}
+
+// Technology Area
+.technology-area {
+    background-color: color(darkgrey);
+
+    .about-style2-image-box {
+        > .slideInUp {
+            background-color: color(darkgrey-accent);
+        }
+
+        .overlay-box {
+            > .title {
+                h1 {
+                    vertical-align: middle;
+                    > span {
+                        top: -2px;
+                        line-height: 18px;
+                        vertical-align: baseline;
+                    }
+                }
+            }
+        }
+    }
+
+    .about-style2-text {
+        > .sec-title {
+            > p {
+                color: white;
+            }
+            > .title {
+                color: white;
+            }
+        }
+
+        > .text > p {
             color: white;
         }
     }
 
-    .footer-area {
-        .footer-shape-bg {
-            background: url("/images/footer/footer-shape.png");
-        }
+    .text {
+        padding-top: $padding-smaller;
 
-        .footer-logo {
-            img {
-                max-height: 50px;
-            }
-        }
-
-        .single-footer-widget {
-
-            .contact-info-box{
-                > ul > li{
-                    vertical-align: middle;
-                    padding-bottom: $padding-xs;
-
-                    >.icon{
-                        vertical-align: middle;
-                        display: inline-block;
-                        width: 42px;
-                        font-size: 40px;
-                        margin-right: $padding-text-xxs;
-
-                        >span {
-                            display: block;
-
-                            &::before{
-                            color: color(darkgrey-light);
-                            opacity: 1;}
-                        }
-                    }
-                    >.text{
-                        display: inline-block;
-                        vertical-align: middle;
-                        > h6{
-                            border-bottom-width: 1px;
-                         }
-                         > p{
-                             margin-top: 4px;
-
-                             >span{
-                                 display: block;
-                                 font-size: .85em;
-                                 line-height: 100%;
-                             }
-                         }
-                    }
-                    
-                }
-            }
-
-            .services-links ul li a,
-            .contact-info-box ul li p,
-            .our-info-box .text p,
-            .usefull-links ul li a {
-                color: white;
-            }
-
-            .contact-info-box ul li h6 {
-                border-bottom-color: color(darkgrey-light);
-            }
-
-            > .title {
-                &::before {
-                    background-color: color(darkgrey-light);
-                }
-
-                &::after {
-                    background-color: color(darkgrey-light);
-                }
+        > p {
+            &:not(:last-of-type) {
+                padding-bottom: $padding-text-medium;
             }
         }
     }
 
-    .footer-bottom-area{
-        
-        .footer-interton-section{
-            display: block;
-            padding-left: $padding-xs;
-            padding-right: $padding-xs;
-            padding-top: $padding-xs;
-
-            @include mqTablet{
-                padding-left: $padding-small;
-                padding-top: 0;
-                padding-right: 0;
-            }
-
-            >.img-holder{
-                width: auto;
-                height: 45px;
-                >img{
-                    object-fit: contain;
-                    height: 100%;
-                }
-            }
-        }
+    .button {
+        padding-top: 0;
     }
-    // END footer -- INDEX
-
-    // Footer -- Subpages
-        .footer-area.style4{
-            .footer-logo >a > img{
-                max-height: 36px;
-            }
-        }    
-
-        .footer-bottom-area.style3{
-            .copyright-text{
-                display: inline-block;
-            }
-            .footer-interton-section{
-                display: inline-block;
-                text-align: center;
-                
-
-                >.img-holder{
-                    width: 100%;
-                }
-            }
-        }
-
-        .footer-contact-info-area{
-
-            // Icons
-            .single-footer-contact-info > .inner{
-                > .icon{
-                    >span::before{
-                        color: color(primary);
-                    }
-                }
-            }
-        }
-
-// INDEX
-    .header__logo {
-        object-fit: contain;
-        width: 165px;
-        max-height: 30px;
-
-        @include mqTablet {
-            width: 165px;
-            max-height: unset;
-        }
-    }
-
-    .main-slider {
-        .rev_slider {
-            .active-revslide .bg-filter {
-                opacity: 1;
-                transition: all 1s;
-            }
-
-            .bg-filter {
-                opacity: 0;
-                transition: all 1s;
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba($color: #000000, $alpha: 0.6);
-                display: block;
-                z-index: 5 !important;
-            }
-        }
-    }
-
-// Technology Area
-    .technology-area {
-        background-color: color(darkgrey);
-
-        .about-style2-image-box{
-            >.slideInUp{
-                background-color: color(darkgrey-accent);
-            }
-
-            .overlay-box{
-                > .title{
-                    h1 { 
-                        vertical-align: middle;
-                        > span {
-                            top: -2px;
-                            line-height: 18px;
-                            vertical-align: baseline;
-                         }
-                     }
-                    
-                }
-            }
-        }
-
-        .about-style2-text{
-            >.sec-title{
-                >p { color: white; }
-                >.title { color: white; }
-            }
-
-            >.text >p{
-                color: white;
-            }
-        }
-
-        .text {
-            padding-top: $padding-smaller;
-
-            > p {
-                &:not(:last-of-type) {
-                    padding-bottom: $padding-text-medium;
-                }
-            }
-        }
-
-        .button {
-            padding-top: 0;
-        }
-    }
+}
 // END Technology Area
 
 // Products overview area
-    .products-overview-area {
-        .text-holder {
-            z-index: 0;
+.products-overview-area {
+    .text-holder {
+        z-index: 0;
 
-            > .icon-holder {
-                display: none;
-            }
-        }
-
-        .img-holder {
-            position: relative;
-            overflow: hidden;
-            max-height: 250px;
-            min-height: 250px;
-
-            > img {
-                object-fit: cover;
-                height: 100%;
-                width: 100%;
-            }
+        > .icon-holder {
+            display: none;
         }
     }
+
+    .img-holder {
+        position: relative;
+        overflow: hidden;
+        max-height: 250px;
+        min-height: 250px;
+
+        > img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
 
 // IMAGES
 
 // Products Page
-    .project-filter li:hover .filter-text,
-    .project-filter li.active .filter-text,
-    .filter-text .count {
-        color: color(primary) !important;
+.project-filter li:hover .filter-text,
+.project-filter li.active .filter-text,
+.filter-text .count {
+    color: color(primary) !important;
+}
+.project-description-area.product-description-area,
+.project-info-area.product-info-area,
+.about-us-description-area {
+    .img-holder {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 350px;
+
+        @include mqMediumScreen {
+            max-height: unset;
+        }
+
+        > img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
     }
-    .project-description-area.product-description-area,
-    .project-info-area.product-info-area,
-    .about-us-description-area {
+}
+
+.project-description-area.product-description-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
+
+        @include mqMediumScreen {
+            float: right;
+            width: 795px;
+            height: 540px;
+        }
+    }
+}
+
+.project-info-area.product-info-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
+
+        @include mqMediumScreen {
+            float: left;
+            width: 795px;
+            height: 540px;
+        }
+    }
+}
+
+.project-info-area.product-info-area {
+    .title > span {
+        display: block;
+    }
+}
+
+.about-us-description-area {
+    .img-holder {
+        overflow: hidden;
+        float: none;
+        position: relative;
+
+        @include mqMediumScreen {
+            float: right;
+            width: 795px;
+            height: 540px;
+        }
+    }
+}
+
+// Why Choose area
+.why-choose-area {
+    padding-top: $padding-huge;
+    padding-bottom: $padding-huge;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff, $alpha: 0.65);
+    }
+
+    .single-box {
+        &.orangebg {
+            background-color: color(primary);
+
+            .icon-holder::before {
+                background-color: color(primary-accent);
+            }
+
+            .text-holder > h3 {
+                color: white;
+            }
+        }
+
+        &.whitebg {
+            .text-holder > h3 {
+                color: color(primary);
+            }
+
+            .icon-holder::before {
+                background-color: color(primary-accent-light);
+            }
+
+            .icon-holder span::before {
+                color: color(primary);
+            }
+        }
+
+        &.blackbg {
+            .text-holder > h3 {
+                color: white;
+            }
+        }
+
+        .text-holder {
+            > h3 {
+                color: color(primary);
+            }
+        }
+    }
+
+    .why-choose-title {
+        ul li {
+            &::before {
+                color: color(primary);
+            }
+        }
+
+        @include mqMediumScreen {
+            height: 100%;
+            padding-bottom: 0px;
+        }
+
+        .sec-title {
+            padding-bottom: $padding-smaller;
+
+            .title {
+                font-size: $font-size-big;
+                line-height: 165%;
+            }
+        }
+
+        .button {
+            margin-top: 85px;
+            background-color: color(primary);
+
+            &::before {
+                background-color: color(primary);
+            }
+
+            > a.btn-one {
+                text-transform: none;
+                background-color: color(primary);
+            }
+        }
+    }
+
+    .icon {
+        height: 65px;
+
+        > img {
+            width: 100%;
+            max-width: 120px;
+        }
+    }
+}
+
+//Testimonials
+.testimonial-area {
+    .single-testimonial-item {
+        .quote-icon {
+            background-color: color(primary);
+        }
+        .client-info {
+            padding-bottom: 0;
+        }
+        .img-box {
+            display: none;
+        }
+    }
+    &.testimonial-index {
+        padding-bottom: 110px;
+    }
+}
+
+// Recently Project
+.recently-project-area {
+    .single-project-style1 {
+        position: relative;
+
         .img-holder {
             width: 100%;
-            position: relative;
-            overflow: hidden;
-            height: 350px;
-
-            @include mqMediumScreen {
-                max-height: unset;
-            }
+            height: 100%;
+            height: 300px;
 
             > img {
                 object-fit: cover;
                 object-position: center;
+                height: 100%;
                 width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translateX(-50%) translateY(-50%);
             }
         }
-    }
 
-    .project-description-area.product-description-area {
-        .img-holder {
-            overflow: hidden;
-            float: none;
-            position: relative;
-
-            @include mqMediumScreen {
-                float: right;
-                width: 795px;
-                height: 540px;
-            }
+        .link-box {
+            display: none !important;
         }
-    }
 
-    .project-info-area.product-info-area {
-        .img-holder {
-            overflow: hidden;
-            float: none;
-            position: relative;
-
-            @include mqMediumScreen {
-                float: left;
-                width: 795px;
-                height: 540px;
-            }
-        }
-    }
-
-    .project-info-area.product-info-area {
-        .title > span {
-            display: block;
-        }
-    }
-
-    .about-us-description-area {
-        .img-holder {
-            overflow: hidden;
-            float: none;
-            position: relative;
-
-            @include mqMediumScreen {
-                float: right;
-                width: 795px;
-                height: 540px;
-            }
-        }
-    }
-
-// Why Choose area
-    .why-choose-area {
-        padding-top: $padding-huge;
-        padding-bottom: $padding-huge;
-        position: relative;
-
-        &::before {
-            content: "";
+        .single-project-link {
             position: absolute;
             display: block;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba($color: #fff, $alpha: 0.65);
-        }
-
-        .single-box {
-            &.orangebg {
-                background-color: color(primary);
-
-                .icon-holder::before {
-                    background-color: color(primary-accent);
-                }
-
-                .text-holder > h3 {
-                    color: white;
-                }
-            }
-
-            &.whitebg {
-                .text-holder > h3 {
-                    color: color(primary);
-                }
-
-                .icon-holder::before {
-                    background-color: color(primary-accent-light);
-                }
-
-                .icon-holder span::before {
-                    color: color(primary);
-                }
-            }
-
-            &.blackbg {
-                .text-holder > h3 {
-                    color: white;
-                }
-            }
-
-            .text-holder {
-                > h3 {
-                    color: color(primary);
-                }
-            }
-        }
-
-        .why-choose-title {
-            ul li {
-                &::before {
-                    color: color(primary);
-                }
-            }
-
-            @include mqMediumScreen {
-                height: 100%;
-                padding-bottom: 0px;
-            }
-
-            .sec-title {
-                padding-bottom: $padding-smaller;
-
-                .title {
-                    font-size: $font-size-big;
-                    line-height: 165%;
-                }
-            }
-
-            .button {
-                margin-top: 85px;
-                background-color: color(primary);
-
-                &::before {
-                    background-color: color(primary);
-                }
-
-                > a.btn-one {
-                    text-transform: none;
-                    background-color: color(primary);
-                }
-            }
-        }
-
-        .icon {
-            height: 65px;
-
-            > img {
-                width: 100%;
-                max-width: 120px;
-            }
+            z-index: 100;
         }
     }
 
-//Testimonials
-    .testimonial-area {
-        .single-testimonial-item {
-            .quote-icon {
-                background-color: color(primary);
-            }
-            .client-info {
-                padding-bottom: 0;
-            }
-            .img-box {
-                display: none;
+    &.inner-content {
+        > .project-row {
+            &:not(:last-of-type) {
+                padding-bottom: 110px;
             }
         }
-        &.testimonial-index {
-            padding-bottom: 110px;
-        }
-    }
 
-// Recently Project
-    .recently-project-area {
+        .owl-stage-outer {
+            overflow: unset;
+        }
+        .owl-dots {
+            display: none !important;
+        }
+
         .single-project-style1 {
-            position: relative;
-
             .img-holder {
-                width: 100%;
-                height: 100%;
-                height: 300px;
-
-                > img {
-                    object-fit: cover;
-                    object-position: center;
-                    height: 100%;
-                    width: 100%;
-                }
+                transition: all 0.3s ease;
             }
 
-            .link-box {
-                display: none !important;
-            }
-
-            .single-project-link {
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 100;
-            }
-        }
-
-        &.inner-content {
-            > .project-row {
-                &:not(:last-of-type) {
-                    padding-bottom: 110px;
-                }
-            }
-
-            .owl-stage-outer {
-                overflow: unset;
-            }
-            .owl-dots {
-                display: none !important;
-            }
-
-            .single-project-style1 {
-                .img-holder {
-                    transition: all 0.3s ease;
-                }
-
-                .overlay-content {
-                    display: none;
-                    transition: none;
-                }
-            }
-        }
-
-        &.overview-style {
-            padding-top: $padding-big;
-            padding-bottom: 70px;
-
-            .owl-dots {
-                display: none !important;
+            .overlay-content {
+                display: none;
+                transition: none;
             }
         }
     }
+
+    &.overview-style {
+        padding-top: $padding-big;
+        padding-bottom: 70px;
+
+        .owl-dots {
+            display: none !important;
+        }
+    }
+}
 
 // Similar projects content
 .similar-projects-area {
     position: relative;
 
     //Similar Projects Area -- General
-    .img-holder{
+    .img-holder {
         height: 265px;
 
-        &::before{
+        &::before {
             // Removes sliding effect
             content: none;
         }
 
-        >img{
+        > img {
             object-fit: cover;
             height: 100%;
             width: 100%;
@@ -1111,15 +1099,15 @@ a {
     }
 
     // Similar Projects Area -- Subsites
-    &.similar-projects-subsite{
-        &.dark{
+    &.similar-projects-subsite {
+        &.dark {
             background-color: color(darkgrey);
             padding-bottom: $padding-smaller;
-                @include mqSmallScreen{
-                    padding-bottom: $padding-small;
-                }
+            @include mqSmallScreen {
+                padding-bottom: $padding-small;
+            }
 
-            &::before{
+            &::before {
                 content: "";
                 position: absolute;
                 top: 0;
@@ -1132,20 +1120,19 @@ a {
                 background-size: initial;
             }
 
-            &::after{
+            &::after {
                 content: "";
-                display:block;
+                display: block;
                 position: absolute;
                 bottom: 0;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 100%;
                 height: 2px;
-                background: rgba($color: color(darkgrey-accent),
-                 $alpha: 1);
-                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+                background: rgba($color: color(darkgrey-accent), $alpha: 1);
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
 
-                @include mqSmallScreen{
+                @include mqSmallScreen {
                     width: 85%;
                     max-width: 850px;
                 }
@@ -1162,10 +1149,15 @@ a {
             //     background: rgba($color: color(darkgrey-accent), $alpha: .35);
             // }
 
-            .similar-projects-content{
-                .similar-project-title > h2 { color: white }
-                .title-holder{
-                    h3, h3 > a { color: white; }
+            .similar-projects-content {
+                .similar-project-title > h2 {
+                    color: white;
+                }
+                .title-holder {
+                    h3,
+                    h3 > a {
+                        color: white;
+                    }
                 }
             }
         }
@@ -1175,7 +1167,7 @@ a {
     &.technology-images-area {
         padding: $padding-small 0;
 
-        @include mqSmallScreen{
+        @include mqSmallScreen {
             padding-top: $padding-medium;
         }
 
@@ -1183,7 +1175,7 @@ a {
             position: relative;
             z-index: 1;
 
-            .title-holder h3{
+            .title-holder h3 {
                 font-size: 16px;
             }
 
@@ -1214,19 +1206,75 @@ a {
     }
 }
 
-
 // About Us
-    .intro-box {
-        align-items: flex-start;
+.intro-box {
+    align-items: flex-start;
+}
+
+// Milestones Area
+.milestones-area {
+    padding: $padding-smaller 0;
+    
+    @include mqSmallScreen{
+        padding: $padding-small $padding-medium;
     }
 
-    .milestones-area {
-        padding-bottom: $padding-big;
-    }
-
-    .about-us-exposition-area {
+    .milestones-box {
         position: relative;
         display: block;
-        margin-top: 110px;
-        padding: 110px 0 50px;
-    }
+
+        .milestones-title{
+            padding-bottom: $padding-smaller;
+        }
+
+        .milestones-content {
+            position: relative;
+            display: block;
+
+            ul {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                li {
+                    position: relative;
+                    display: block;
+                    padding-left: 20px;
+                    margin-bottom: 26px;
+
+                    .icon {
+                        position: absolute;
+                        top: 2px;
+                        left: 1px;
+
+                        > span{
+                            color: color(primary);
+                            &::before{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+
+                    .text {
+                        position: relative;
+                        display: block;
+                        padding-left: 20px;
+
+                        h3{
+                            color: color(primary);
+                        }
+
+                        p{  margin: 0;  }
+                    }
+                }
+            }
+        } // # end milestones-content
+    }// # end milestones-box
+} //# end milestones area
+
+.about-us-exposition-area {
+    position: relative;
+    display: block;
+    margin-top: 110px;
+    padding: 110px 0 50px;
+}
