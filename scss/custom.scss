@@ -472,7 +472,7 @@ a {
 }
 .footer-bottom-area,
 .footer-bottom-area.style3 {
-    background-color: $darkgrey;
+    background: color(darkgrey-accent);
 
     .copyright-text p {
         color: white;
@@ -920,7 +920,11 @@ a {
     // Similar Projects Area -- Subsites
     &.similar-projects-subsite{
         &.dark{
-            background-color: color(darkgrey-accent);
+            background-color: color(darkgrey);
+            padding-bottom: $padding-smaller;
+                @include mqSmallScreen{
+                    padding-bottom: $padding-small;
+                }
 
             &::before{
                 content: "";
@@ -934,6 +938,36 @@ a {
                 background-repeat: no-repeat;
                 background-size: initial;
             }
+
+            &::after{
+                content: "";
+                display:block;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: 2px;
+                background: rgba($color: color(darkgrey-accent),
+                 $alpha: 1);
+                background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,0) 100%);
+
+                @include mqSmallScreen{
+                    width: 85%;
+                    max-width: 850px;
+                }
+            }
+
+            // &::after{
+            //     content: "";
+            //     display:block;
+            //     position: absolute;
+            //     bottom: 0;
+            //     left: 0;
+            //     width: 100%;
+            //     height: 2px;
+            //     background: rgba($color: color(darkgrey-accent), $alpha: .35);
+            // }
 
             .similar-projects-content{
                 .similar-project-title > h2 { color: white }
