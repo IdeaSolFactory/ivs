@@ -54,6 +54,10 @@ body{
         >.two-column-section-item{
             &:not(:first-of-type){
                 padding-top: $padding-small;
+
+                @include mqSmallScreen{
+                    padding-top: $padding-medium;
+                }
             }
         }
        
@@ -951,6 +955,10 @@ a {
         .single-similar-project {
             position: relative;
             z-index: 1;
+
+            .title-holder h3{
+                font-size: 16px;
+            }
 
             .img-holder {
                 transition: all 0.3s ease;
