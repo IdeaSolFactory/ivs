@@ -552,10 +552,13 @@ a {
   height: 100%;
 }
 
+<<<<<<< HEAD
 .footer-area.style4 .footer-logo > a > img {
   max-height: 36px;
 }
 
+=======
+>>>>>>> 6f2b57bf8c19d5332219b8b1a1b81b4594133396
 .footer-bottom-area.style3 .copyright-text {
   display: inline-block;
 }
