@@ -5,6 +5,34 @@ body {
   scroll-behavior: smooth;
 }
 
+strong {
+  color: #565963;
+}
+
+strong.style2 {
+  color: #F3732A;
+}
+
+.dropcap {
+  color: #F3732A;
+  float: left;
+  font-size: 85px;
+  line-height: 70px;
+  padding-bottom: 0;
+  padding-top: 6px;
+  padding-right: 2px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 992px) {
+  .dropcap {
+    font-size: 130px;
+    line-height: 105px;
+    padding-bottom: 0;
+    padding-top: 2px;
+  }
+}
+
 @media (max-width: 480px) {
   .breaktext-sm {
     display: inline-block;
@@ -349,16 +377,31 @@ a {
   padding-top: 50px;
 }
 
-.sec-text-area .text {
+.sec-text-area .text:not(:last-of-type) {
   padding-bottom: 30px;
 }
 
 .sec-text-area .text > p {
+  font-size: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  .sec-text-area .text > p {
+    font-size: 17px;
+  }
+}
+
+.sec-text-area .text > p:not(:last-child) {
+  padding-bottom: 1.2em;
+}
+
+.sec-text-area .text .img-holder {
+  margin-bottom: 0;
   padding-bottom: 1.2em;
 }
 
 .sec-text-area .lead-text {
-  font-size: 22px;
+  font-size: 17px;
   line-height: 165%;
 }
 

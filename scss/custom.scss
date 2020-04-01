@@ -10,6 +10,35 @@ body{
     scroll-behavior: smooth;
 }
 
+    // TEXT
+
+        // Text transforms
+        strong{
+            color: color(darkgrey-light);
+        }
+        strong.style2{
+            color: color(primary);
+        }
+
+        // DropCaps
+        .dropcap{
+            color: color(primary);
+            float: left;
+            font-size: 85px;
+            line-height: 70px;
+            padding-bottom: 0;
+            padding-top: 6px;
+            padding-right: 2px;
+            font-weight: 500;
+
+            @include mqSmallScreen{
+                font-size: $font-size-xxl;
+                line-height: $font-size-xxl - 25px;
+                padding-bottom: 0;
+                padding-top: 2px;
+            }
+        }
+
     // Text Breakers
     .breaktext-sm{
         @media (max-width: $breakpoint-mobile){
@@ -409,15 +438,28 @@ a {
     }
 
     .text {
-        padding-bottom: $padding-smaller;
+        &:not(:last-of-type){
+            padding-bottom: $padding-smaller;
+        }        
 
         > p {
+            font-size: $font-size-body;
+                @include mqSmallScreen{
+                    font-size: $font-size-lead;
+                }
+            &:not(:last-child){
+                padding-bottom: $padding-text-medium;
+            }
+        }
+
+        .img-holder{
+            margin-bottom: 0;
             padding-bottom: $padding-text-medium;
         }
     }
 
     .lead-text {
-        font-size: $font-size-big;
+        font-size: $font-size-lead;
         line-height: 165%;
     }
 
