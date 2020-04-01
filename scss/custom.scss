@@ -94,6 +94,11 @@ strong.style2 {
 /*============= END General formatting ==============*/
 
 // Buttons
+
+.btn-one{
+    text-transform: none;
+}
+
 .btn-one,
 .btn-one:hover {
     background-color: color(primary);

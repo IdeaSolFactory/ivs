@@ -85,6 +85,10 @@ strong.style2 {
 }
 
 /*============= END General formatting ==============*/
+.btn-one {
+  text-transform: none;
+}
+
 .btn-one,
 .btn-one:hover {
   background-color: #F3732A;
