@@ -373,7 +373,17 @@ a {
   }
 }
 
-.project-description-area .bottpm-text > p:last-of-type {
+.project-description-area .pattern-bg > img {
+  opacity: .2;
+}
+
+@media screen and (min-width: 992px) {
+  .project-description-area .project-description-content:first-of-type {
+    padding-top: 100px;
+  }
+}
+
+.project-description-area .project-description-content .bottpm-text > p:last-of-type {
   margin-bottom: 0;
 }
 

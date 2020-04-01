@@ -418,11 +418,28 @@ a {
         padding-bottom: $padding-medium;
     }
 
-    .bottpm-text{
-        >p:last-of-type{
-            margin-bottom: 0;
+    .pattern-bg{
+        >img{
+            opacity: .2;
         }
     }
+
+    .project-description-content{
+
+        &:first-of-type{
+            @include mqSmallScreen{
+                padding-top: 100px;
+            }
+        }
+
+        .bottpm-text{
+            >p:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    
 }
 
 .sec-text-area {
