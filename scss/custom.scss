@@ -35,9 +35,30 @@ body{
         }
     }
 
-.valign-top {
-    vertical-align: top !important;
-}
+    // Alignment
+    .valign-top {
+        vertical-align: top !important;
+    }
+
+    // 2 Column sections
+    .two-column-section{
+        position: relative;
+        display: block;
+        padding-top: $padding-smaller;
+        padding-bottom: $padding-smaller;
+
+        @include mqSmallScreen{
+            padding: $padding-medium 0;
+        }
+
+        >.two-column-section-item{
+            &:not(:first-of-type){
+                padding-top: $padding-small;
+            }
+        }
+       
+    }
+
 /*============= END General formatting ==============*/
 
 // Buttons
@@ -364,7 +385,20 @@ a {
 
 /*============== END Breadcrumb area ===============*/
 
-// General Sections Formating
+/*==================================================
+            GENERAL SECTION FORMATTING
+====================================================*/
+
+    // Project Description Area
+    .project-description-area{
+        padding-bottom: $padding-smaller;
+        
+        @include mqSmallScreen{
+            padding-bottom: $padding-medium;
+        }
+       
+    }
+
 .sec-text-area {
     .text:first-of-type {
         padding-top: $padding-small;
@@ -383,9 +417,12 @@ a {
         line-height: 165%;
     }
 
+    .sec-title{
+        padding-bottom: $padding-text-medium;
+    }
+
     .sec-text-lead {
         font-size: $font-size-lead;
-        padding-bottom: $padding-small;
     }
 
     .sec-text-big {
@@ -405,6 +442,8 @@ a {
         margin-bottom: $padding-small;
     }
 }
+
+/*======= END GENERAL SECTION FORMATTING =========*/
 
 // Breadcrumb area
 .breadcrumb-area.style2 {
@@ -474,39 +513,39 @@ a {
 // END footer
 
 // INDEX
-.header__logo {
-    object-fit: contain;
-    width: 165px;
-    max-height: 30px;
-
-    @include mqTablet {
+    .header__logo {
+        object-fit: contain;
         width: 165px;
-        max-height: unset;
-    }
-}
+        max-height: 30px;
 
-.main-slider {
-    .rev_slider {
-        .active-revslide .bg-filter {
-            opacity: 1;
-            transition: all 1s;
-        }
-
-        .bg-filter {
-            opacity: 0;
-            transition: all 1s;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba($color: #000000, $alpha: 0.6);
-            display: block;
-            z-index: 5 !important;
+        @include mqTablet {
+            width: 165px;
+            max-height: unset;
         }
     }
-}
+
+    .main-slider {
+        .rev_slider {
+            .active-revslide .bg-filter {
+                opacity: 1;
+                transition: all 1s;
+            }
+
+            .bg-filter {
+                opacity: 0;
+                transition: all 1s;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color: #000000, $alpha: 0.6);
+                display: block;
+                z-index: 5 !important;
+            }
+        }
+    }
 
 // Technology Area
     .technology-area {
@@ -560,303 +599,301 @@ a {
 // END Technology Area
 
 // Products overview area
-.products-overview-area {
-    .text-holder {
-        z-index: 0;
-
-        > .icon-holder {
-            display: none;
-        }
-    }
-
-    .img-holder {
-        position: relative;
-        overflow: hidden;
-        max-height: 250px;
-        min-height: 250px;
-
-        > img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
-
-// IMAGES
-
-// Products Page
-.project-filter li:hover .filter-text,
-.project-filter li.active .filter-text,
-.filter-text .count {
-    color: color(primary) !important;
-}
-.project-description-area.product-description-area,
-.project-info-area.product-info-area,
-.about-us-description-area {
-    .img-holder {
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        height: 350px;
-
-        @include mqMediumScreen {
-            max-height: unset;
-        }
-
-        > img {
-            object-fit: cover;
-            object-position: center;
-            width: 100%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-    }
-}
-
-.project-description-area.product-description-area {
-    .img-holder {
-        overflow: hidden;
-        float: none;
-        position: relative;
-
-        @include mqMediumScreen {
-            float: right;
-            width: 795px;
-            height: 540px;
-        }
-    }
-}
-
-.project-info-area.product-info-area {
-    .img-holder {
-        overflow: hidden;
-        float: none;
-        position: relative;
-
-        @include mqMediumScreen {
-            float: left;
-            width: 795px;
-            height: 540px;
-        }
-    }
-}
-
-.project-info-area.product-info-area {
-    .title > span {
-        display: block;
-    }
-}
-
-.about-us-description-area {
-    .img-holder {
-        overflow: hidden;
-        float: none;
-        position: relative;
-
-        @include mqMediumScreen {
-            float: right;
-            width: 795px;
-            height: 540px;
-        }
-    }
-}
-
-// Why Choose area
-.why-choose-area {
-    padding-top: $padding-huge;
-    padding-bottom: $padding-huge;
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #fff, $alpha: 0.65);
-    }
-
-    .single-box {
-        &.orangebg {
-            background-color: color(primary);
-
-            .icon-holder::before {
-                background-color: color(primary-accent);
-            }
-
-            .text-holder > h3 {
-                color: white;
-            }
-        }
-
-        &.whitebg {
-            .text-holder > h3 {
-                color: color(primary);
-            }
-
-            .icon-holder::before {
-                background-color: color(primary-accent-light);
-            }
-
-            .icon-holder span::before {
-                color: color(primary);
-            }
-        }
-
-        &.blackbg {
-            .text-holder > h3 {
-                color: white;
-            }
-        }
-
+    .products-overview-area {
         .text-holder {
-            > h3 {
-                color: color(primary);
+            z-index: 0;
+
+            > .icon-holder {
+                display: none;
             }
         }
-    }
-
-    .why-choose-title {
-        ul li {
-            &::before {
-                color: color(primary);
-            }
-        }
-
-        @include mqMediumScreen {
-            height: 100%;
-            padding-bottom: 0px;
-        }
-
-        .sec-title {
-            padding-bottom: $padding-smaller;
-
-            .title {
-                font-size: $font-size-big;
-                line-height: 165%;
-            }
-        }
-
-        .button {
-            margin-top: 85px;
-            background-color: color(primary);
-
-            &::before {
-                background-color: color(primary);
-            }
-
-            > a.btn-one {
-                text-transform: none;
-                background-color: color(primary);
-            }
-        }
-    }
-
-    .icon {
-        height: 65px;
-
-        > img {
-            width: 100%;
-            max-width: 120px;
-        }
-    }
-}
-
-//Testimonials
-.testimonial-area {
-    .single-testimonial-item {
-        .quote-icon {
-            background-color: color(primary);
-        }
-        .client-info {
-            padding-bottom: 0;
-        }
-        .img-box {
-            display: none;
-        }
-    }
-    &.testimonial-index {
-        padding-bottom: 110px;
-    }
-}
-
-// Recently Project
-.recently-project-area {
-    .single-project-style1 {
-        position: relative;
 
         .img-holder {
-            width: 100%;
-            height: 100%;
-            height: 300px;
+            position: relative;
+            overflow: hidden;
+            max-height: 250px;
+            min-height: 250px;
 
             > img {
                 object-fit: cover;
-                object-position: center;
                 height: 100%;
                 width: 100%;
             }
         }
+    }
 
-        .link-box {
-            display: none !important;
+// IMAGES
+
+// Products Page
+    .project-filter li:hover .filter-text,
+    .project-filter li.active .filter-text,
+    .filter-text .count {
+        color: color(primary) !important;
+    }
+    .project-description-area.product-description-area,
+    .project-info-area.product-info-area,
+    .about-us-description-area {
+        .img-holder {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+
+            @include mqMediumScreen {
+                max-height: unset;
+            }
+
+            > img {
+                object-fit: cover;
+                object-position: center;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
         }
+    }
 
-        .single-project-link {
+    .project-description-area.product-description-area {
+        .img-holder {
+            overflow: hidden;
+            float: none;
+            position: relative;
+
+            @include mqMediumScreen {
+                float: right;
+                width: 795px;
+                height: 540px;
+            }
+        }
+    }
+
+    .project-info-area.product-info-area {
+        .img-holder {
+            overflow: hidden;
+            float: none;
+            position: relative;
+
+            @include mqMediumScreen {
+                float: left;
+                width: 795px;
+                height: 540px;
+            }
+        }
+    }
+
+    .project-info-area.product-info-area {
+        .title > span {
+            display: block;
+        }
+    }
+
+    .about-us-description-area {
+        .img-holder {
+            overflow: hidden;
+            float: none;
+            position: relative;
+
+            @include mqMediumScreen {
+                float: right;
+                width: 795px;
+                height: 540px;
+            }
+        }
+    }
+
+// Why Choose area
+    .why-choose-area {
+        padding-top: $padding-huge;
+        padding-bottom: $padding-huge;
+        position: relative;
+
+        &::before {
+            content: "";
             position: absolute;
             display: block;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 100;
+            background-color: rgba($color: #fff, $alpha: 0.65);
+        }
+
+        .single-box {
+            &.orangebg {
+                background-color: color(primary);
+
+                .icon-holder::before {
+                    background-color: color(primary-accent);
+                }
+
+                .text-holder > h3 {
+                    color: white;
+                }
+            }
+
+            &.whitebg {
+                .text-holder > h3 {
+                    color: color(primary);
+                }
+
+                .icon-holder::before {
+                    background-color: color(primary-accent-light);
+                }
+
+                .icon-holder span::before {
+                    color: color(primary);
+                }
+            }
+
+            &.blackbg {
+                .text-holder > h3 {
+                    color: white;
+                }
+            }
+
+            .text-holder {
+                > h3 {
+                    color: color(primary);
+                }
+            }
+        }
+
+        .why-choose-title {
+            ul li {
+                &::before {
+                    color: color(primary);
+                }
+            }
+
+            @include mqMediumScreen {
+                height: 100%;
+                padding-bottom: 0px;
+            }
+
+            .sec-title {
+                padding-bottom: $padding-smaller;
+
+                .title {
+                    font-size: $font-size-big;
+                    line-height: 165%;
+                }
+            }
+
+            .button {
+                margin-top: 85px;
+                background-color: color(primary);
+
+                &::before {
+                    background-color: color(primary);
+                }
+
+                > a.btn-one {
+                    text-transform: none;
+                    background-color: color(primary);
+                }
+            }
+        }
+
+        .icon {
+            height: 65px;
+
+            > img {
+                width: 100%;
+                max-width: 120px;
+            }
         }
     }
 
-    &.inner-content {
-        > .project-row {
-            &:not(:last-of-type) {
-                padding-bottom: 110px;
+//Testimonials
+    .testimonial-area {
+        .single-testimonial-item {
+            .quote-icon {
+                background-color: color(primary);
             }
-        }
-
-        .owl-stage-outer {
-            overflow: unset;
-        }
-        .owl-dots {
-            display: none !important;
-        }
-
-        .single-project-style1 {
-            .img-holder {
-                transition: all 0.3s ease;
+            .client-info {
+                padding-bottom: 0;
             }
-
-            .overlay-content {
+            .img-box {
                 display: none;
-                transition: none;
+            }
+        }
+        &.testimonial-index {
+            padding-bottom: 110px;
+        }
+    }
+
+// Recently Project
+    .recently-project-area {
+        .single-project-style1 {
+            position: relative;
+
+            .img-holder {
+                width: 100%;
+                height: 100%;
+                height: 300px;
+
+                > img {
+                    object-fit: cover;
+                    object-position: center;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .link-box {
+                display: none !important;
+            }
+
+            .single-project-link {
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 100;
+            }
+        }
+
+        &.inner-content {
+            > .project-row {
+                &:not(:last-of-type) {
+                    padding-bottom: 110px;
+                }
+            }
+
+            .owl-stage-outer {
+                overflow: unset;
+            }
+            .owl-dots {
+                display: none !important;
+            }
+
+            .single-project-style1 {
+                .img-holder {
+                    transition: all 0.3s ease;
+                }
+
+                .overlay-content {
+                    display: none;
+                    transition: none;
+                }
+            }
+        }
+
+        &.overview-style {
+            padding-top: $padding-big;
+            padding-bottom: 70px;
+
+            .owl-dots {
+                display: none !important;
             }
         }
     }
-
-    &.overview-style {
-        padding-top: $padding-big;
-        padding-bottom: 70px;
-
-        .owl-dots {
-            display: none !important;
-        }
-    }
-}
 
 // Similar projects content
-
-
 .similar-projects-area {
     position: relative;
 
@@ -905,6 +942,12 @@ a {
 
     // Similar Projects Area -- Technology
     &.technology-images-area {
+        padding: $padding-small 0;
+
+        @include mqSmallScreen{
+            padding-top: $padding-medium;
+        }
+
         .single-similar-project {
             position: relative;
             z-index: 1;
@@ -938,17 +981,17 @@ a {
 
 
 // About Us
-.intro-box {
-    align-items: flex-start;
-}
+    .intro-box {
+        align-items: flex-start;
+    }
 
-.milestones-area {
-    padding-bottom: $padding-big;
-}
+    .milestones-area {
+        padding-bottom: $padding-big;
+    }
 
-.about-us-exposition-area {
-    position: relative;
-    display: block;
-    margin-top: 110px;
-    padding: 110px 0 50px;
-}
+    .about-us-exposition-area {
+        position: relative;
+        display: block;
+        margin-top: 110px;
+        padding: 110px 0 50px;
+    }

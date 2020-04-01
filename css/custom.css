@@ -33,6 +33,23 @@ body {
   vertical-align: top !important;
 }
 
+.two-column-section {
+  position: relative;
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .two-column-section {
+    padding: 75px 0;
+  }
+}
+
+.two-column-section > .two-column-section-item:not(:first-of-type) {
+  padding-top: 50px;
+}
+
 /*============= END General formatting ==============*/
 .btn-one,
 .btn-one:hover {
@@ -309,6 +326,19 @@ a {
 }
 
 /*============== END Breadcrumb area ===============*/
+/*==================================================
+            GENERAL SECTION FORMATTING
+====================================================*/
+.project-description-area {
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 992px) {
+  .project-description-area {
+    padding-bottom: 75px;
+  }
+}
+
 .sec-text-area .text:first-of-type {
   padding-top: 50px;
 }
@@ -326,9 +356,12 @@ a {
   line-height: 165%;
 }
 
+.sec-text-area .sec-title {
+  padding-bottom: 1.2em;
+}
+
 .sec-text-area .sec-text-lead {
   font-size: 17px;
-  padding-bottom: 50px;
 }
 
 .sec-text-area .sec-text-big {
@@ -350,6 +383,7 @@ a {
   margin-bottom: 50px;
 }
 
+/*======= END GENERAL SECTION FORMATTING =========*/
 .breadcrumb-area.style2::after {
   content: "";
   position: absolute;
@@ -802,6 +836,16 @@ a {
 
 .similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3, .similar-projects-area.similar-projects-subsite.dark .similar-projects-content .title-holder h3 > a {
   color: white;
+}
+
+.similar-projects-area.technology-images-area {
+  padding: 50px 0;
+}
+
+@media screen and (min-width: 992px) {
+  .similar-projects-area.technology-images-area {
+    padding-top: 75px;
+  }
 }
 
 .similar-projects-area.technology-images-area .single-similar-project {
