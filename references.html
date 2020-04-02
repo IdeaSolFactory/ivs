@@ -608,21 +608,32 @@
             Zoomable();
 
             function Zoomable(){
-                    var zoomableOptions = {
-                        zoomableContainer: "has-zoomable",
-                        zoomableClass: "zoomable",
-                        pathToPics: "images/",
-                        picSizes: [480, 768, 1200, 1680, 1920],
-                        useBgFilter: true
-                    }
+
+                var zoomableOptions = {
+                    zoomableContainerClass: "has-zoomable",
+                    zoomableWrapperClass: "zoomable-image-wrapper",
+                    zoomableClass: "zoomable",
+                    pathToPics: "images/",
+                    picSizes: [480, 768, 1200, 1680, 1920],
+                    useBgFilter: true
+                }
+
+                var isZoomed = false;
+
+                // Check if zoomable-image-wrapper was clicked
+                $("." + zoomableOptions.zoomableWrapperClass).click(function(){
+
+                });
+
                 
-                $("." + zoomableOptions.zoomableContainer).click(function(){
+                $("." + zoomableOptions.zoomableContainerClass).click(function(){
                     
-                    if( $(".has-zoomable img").hasClass("zoomable") ){
+                    if( $(".has-zoomable img").hasClass("zoomable") && isZoomed == false ){
                         $("body").append(
                             '<div class="zoomable-image-wrapper"></div>'
                         );
-                    }                    
+                        isZoomed = true;
+                    }                
                 });
 
             }

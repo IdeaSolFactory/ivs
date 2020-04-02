@@ -1,5 +1,19 @@
 @import 'sizes';
 
+// BUTTONS
+@mixin btnOne{
+    .btn-one{
+        text-transform: none;
+        background-color: color(primary);
+        transition: all ease .3s !important;
+        transition-delay: 0s;
+    
+        @include LinkSelectorReact{
+            background-color: color(primary) !important;
+        }    
+    }
+}
+
 // PSEUDO SELECTORS
 @mixin LinkSelectorStyle{
     &:hover, &:active, &:visited{

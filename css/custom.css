@@ -97,14 +97,14 @@ strong.style2 {
 /*============= END General formatting ==============*/
 .btn-one {
   text-transform: none;
-}
-
-.btn-one,
-.btn-one:hover {
   background-color: #F3732A;
+  -webkit-transition: all ease .3s !important;
+  transition: all ease .3s !important;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
 }
 
-.btn-one:hover {
+.btn-one:hover, .btn-one:active, .btn-one:focus {
   background-color: #F3732A !important;
 }
 
@@ -721,22 +721,49 @@ a {
   padding-top: 0;
 }
 
-.products-overview-area .text-holder {
+.products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one {
+  text-transform: none;
+  background-color: #F3732A;
+  -webkit-transition: all ease .3s !important;
+  transition: all ease .3s !important;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one:hover, .products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one:active, .products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one:focus {
+  background-color: #F3732A !important;
+}
+
+.products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one.inactive {
+  background-color: #f6f6f6;
+  color: initial;
+}
+
+.products-overview-area .single-service-style2:hover .text-holder .inner .read-more .btn-one.inactive:hover {
+  background-color: #f6f6f6 !important;
+  color: initial;
+}
+
+.products-overview-area .single-service-style2 .text-holder .inner .read-more .btn-one.inactive > span {
+  display: none !important;
+}
+
+.products-overview-area .single-service-style2 .text-holder {
   z-index: 0;
 }
 
-.products-overview-area .text-holder > .icon-holder {
+.products-overview-area .single-service-style2 .text-holder > .icon-holder {
   display: none;
 }
 
-.products-overview-area .img-holder {
+.products-overview-area .single-service-style2 .img-holder {
   position: relative;
   overflow: hidden;
   max-height: 250px;
   min-height: 250px;
 }
 
-.products-overview-area .img-holder > img {
+.products-overview-area .single-service-style2 .img-holder > img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;

@@ -110,19 +110,9 @@ strong.style2 {
 /*============= END General formatting ==============*/
 
 // Buttons
+@include btnOne;
 
-.btn-one{
-    text-transform: none;
-}
 
-.btn-one,
-.btn-one:hover {
-    background-color: color(primary);
-}
-
-.btn-one:hover {
-    background-color: color(primary) !important;
-}
 
 .about-style2-image-box .overlay-box .button a span:before {
     background-color: color(primary);
@@ -823,26 +813,55 @@ a {
 
 // Products overview area
 .products-overview-area {
-    .text-holder {
-        z-index: 0;
 
-        > .icon-holder {
-            display: none;
+    .single-service-style2{
+        &:hover{
+            .text-holder .inner .read-more{
+                @include btnOne;
+
+                .btn-one.inactive{
+                    background-color: color(light);
+                    color: initial;
+
+                    &:hover{
+                        background-color: color(light) !important;
+                        color: initial;
+                    }
+                }             
+            }
         }
-    }
 
-    .img-holder {
-        position: relative;
-        overflow: hidden;
-        max-height: 250px;
-        min-height: 250px;
-
-        > img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
+        .text-holder .inner .read-more{
+            .btn-one.inactive{
+                >span{
+                    display: none !important;
+                }
+            }
         }
+
+        .text-holder {
+            z-index: 0;
+    
+            > .icon-holder {
+                display: none;
+            }
+        }
+    
+        .img-holder {
+            position: relative;
+            overflow: hidden;
+            max-height: 250px;
+            min-height: 250px;
+    
+            > img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
     }
+    
 }
 
 // IMAGES
