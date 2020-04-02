@@ -408,7 +408,16 @@ a {
                   BREADCRUMB AREAS
 ====================================================*/
 .breadcrumb-area {
+
     //General
+    .inner-content-box{
+        >.title-s2{
+            h1{
+                text-transform: unset;
+            }
+        }
+    }
+
     .breadcrumb-menu{
         ul > li > a{
             &:hover{

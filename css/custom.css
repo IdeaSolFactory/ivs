@@ -348,6 +348,10 @@ a {
 /*==================================================
                   BREADCRUMB AREAS
 ====================================================*/
+.breadcrumb-area .inner-content-box > .title-s2 h1 {
+  text-transform: unset;
+}
+
 .breadcrumb-area .breadcrumb-menu ul > li > a:hover {
   color: #F3732A;
 }
