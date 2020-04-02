@@ -248,6 +248,33 @@ a {
   border-left: none;
 }
 
+@media screen and (min-width: 992px) {
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li:not(:last-of-type) {
+    margin-right: 30px;
+  }
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li > .single-item > .text p {
+    font-size: 15px;
+  }
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li > .single-item > .text h3 {
+    font-size: 15px;
+  }
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li > .single-item > .icon > span::before {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li:not(:last-of-type) {
+    margin-right: 30px;
+  }
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li > .single-item > .text h3 {
+    font-size: 18px;
+  }
+  .main-header .header-lower-style1 .inner-content > .header-contact-info > li > .single-item > .icon > span::before {
+    font-size: 50px;
+  }
+}
+
 .main-header .header-lower-style1 .inner-content > .header-contact-info > li:last-child {
   border: none;
 }
