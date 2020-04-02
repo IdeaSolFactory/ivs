@@ -110,6 +110,17 @@ strong.style2 {
 /*============= END General formatting ==============*/
 
 // Buttons
+
+.button{
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+.dark .more-project-button > .btn-two{
+    color: white;
+}
+
 @include btnOne;
 @include btnTwo;
 

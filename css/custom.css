@@ -95,6 +95,16 @@ strong.style2 {
 }
 
 /*============= END General formatting ==============*/
+.button {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+.dark .more-project-button > .btn-two {
+  color: white;
+}
+
 .btn-one {
   text-transform: none;
   background-color: #F3732A;
