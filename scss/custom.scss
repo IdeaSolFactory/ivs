@@ -252,7 +252,7 @@ a {
 
     .logo-box-style1 {
         position: absolute;
-        left: 10px;
+        left: 30px;
         top: 27px;
         margin: 0;
         padding: 0;
@@ -262,9 +262,15 @@ a {
         }
 
         @include mqTablet {
+            left: 15px;
+            top: 22px;
             .header__logo {
                 height: 35px;
             }
+        }
+
+        @include mqSmallScreen{
+            top: 25px;
         }
     }
 

@@ -224,7 +224,7 @@ a {
 
 .main-header .logo-box-style1 {
   position: absolute;
-  left: 10px;
+  left: 30px;
   top: 27px;
   margin: 0;
   padding: 0;
@@ -235,8 +235,18 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .main-header .logo-box-style1 {
+    left: 15px;
+    top: 22px;
+  }
   .main-header .logo-box-style1 .header__logo {
     height: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-header .logo-box-style1 {
+    top: 25px;
   }
 }
 
