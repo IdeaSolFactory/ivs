@@ -111,7 +111,7 @@ strong.style2 {
 
 // Buttons
 @include btnOne;
-
+@include btnTwo;
 
 
 .about-style2-image-box .overlay-box .button a span:before {
@@ -363,6 +363,15 @@ a {
                   BREADCRUMB AREAS
 ====================================================*/
 .breadcrumb-area {
+    //General
+    .breadcrumb-menu{
+        ul > li > a{
+            &:hover{
+                color: color(primary);
+            }
+        }
+    }
+
     //Technology
     &.breadcrumb-technology {
         background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
@@ -1068,6 +1077,7 @@ a {
 
 // Recently Project
 .recently-project-area {
+    
     .single-project-style1 {
         position: relative;
 

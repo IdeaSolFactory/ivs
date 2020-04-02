@@ -108,6 +108,10 @@ strong.style2 {
   background-color: #F3732A !important;
 }
 
+.btn-two:hover {
+  color: #F3732A;
+}
+
 .about-style2-image-box .overlay-box .button a span:before {
   background-color: #F3732A;
 }
@@ -307,6 +311,10 @@ a {
 /*==================================================
                   BREADCRUMB AREAS
 ====================================================*/
+.breadcrumb-area .breadcrumb-menu ul > li > a:hover {
+  color: #F3732A;
+}
+
 .breadcrumb-area.breadcrumb-technology {
   background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
 }
