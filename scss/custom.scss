@@ -1011,16 +1011,38 @@ a {
         }
     }
 
-    .why-choose-title {
+    .why-choose-title {  
+        max-width: 100%;
+        position: relative;
+        
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: url("/images/footer/footer-shape.png");
+            background-position: right;
+            background-repeat: no-repeat;
+            opacity: 1;
+
+        }
+
+        @include mqMediumScreen {
+            max-width: 390px;
+            height: 100%;
+            padding-bottom: 0px;
+
+            &::before{
+                opacity: .6;
+            }
+        }
+
         ul li {
             &::before {
                 color: color(primary);
             }
-        }
-
-        @include mqMediumScreen {
-            height: 100%;
-            padding-bottom: 0px;
         }
 
         .sec-title {

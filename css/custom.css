@@ -911,15 +911,37 @@ a {
   color: #F3732A;
 }
 
-.why-choose-area .why-choose-title ul li::before {
-  color: #F3732A;
+.why-choose-area .why-choose-title {
+  max-width: 100%;
+  position: relative;
+}
+
+.why-choose-area .why-choose-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/images/footer/footer-shape.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 
 @media screen and (min-width: 1200px) {
   .why-choose-area .why-choose-title {
+    max-width: 390px;
     height: 100%;
     padding-bottom: 0px;
   }
+  .why-choose-area .why-choose-title::before {
+    opacity: .6;
+  }
+}
+
+.why-choose-area .why-choose-title ul li::before {
+  color: #F3732A;
 }
 
 .why-choose-area .why-choose-title .sec-title {
