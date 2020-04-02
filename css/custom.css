@@ -1018,7 +1018,7 @@ a {
 }
 
 .testimonial-area .single-testimonial-item .client-info {
-  padding-bottom: 0;
+  padding: 0 36px;
 }
 
 .testimonial-area .single-testimonial-item .img-box {
