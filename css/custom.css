@@ -728,6 +728,24 @@ a {
   background-color: #27282c;
 }
 
+.technology-area .about-style2-text > .sec-title > p {
+  color: colr(primary);
+}
+
+.technology-area .about-style2-text > .sec-title > .title {
+  color: white;
+}
+
+.technology-area .about-style2-text > .text > p {
+  color: white;
+}
+
+@media screen and (min-width: 992px) {
+  .technology-area .about-style2-image-box > .image {
+    padding-top: 60px;
+  }
+}
+
 .technology-area .about-style2-image-box > .slideInUp {
   background-color: #1f1f23;
 }
@@ -740,18 +758,6 @@ a {
   top: -2px;
   line-height: 18px;
   vertical-align: baseline;
-}
-
-.technology-area .about-style2-text > .sec-title > p {
-  color: white;
-}
-
-.technology-area .about-style2-text > .sec-title > .title {
-  color: white;
-}
-
-.technology-area .about-style2-text > .text > p {
-  color: white;
 }
 
 .technology-area .text {

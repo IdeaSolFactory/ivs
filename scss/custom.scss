@@ -815,7 +815,29 @@ a {
 .technology-area {
     background-color: color(darkgrey);
 
+    .about-style2-text {
+        > .sec-title {
+            > p {
+                color: colr(primary);
+            }
+            > .title {
+                color: white;
+            }
+        }
+
+        > .text > p {
+            color: white;
+        }
+    }
+
     .about-style2-image-box {
+
+        >.image{
+            @include mqSmallScreen{
+                padding-top: 60px;
+            }
+        }
+
         > .slideInUp {
             background-color: color(darkgrey-accent);
         }
@@ -831,21 +853,6 @@ a {
                     }
                 }
             }
-        }
-    }
-
-    .about-style2-text {
-        > .sec-title {
-            > p {
-                color: white;
-            }
-            > .title {
-                color: white;
-            }
-        }
-
-        > .text > p {
-            color: white;
         }
     }
 
