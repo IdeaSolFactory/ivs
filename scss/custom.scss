@@ -484,6 +484,9 @@ a {
 
 .tp-caption{
     margin: 4px 0 4px 0 !important;
+    >.slide-content>.big-title{
+        text-transform: uppercase !important;
+    }
 }
 
 /*================= END Heroes ====================*/
