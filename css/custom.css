@@ -92,8 +92,8 @@ strong.style2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 999999999999;
-  -webkit-transition: .3s all ease;
-  transition: .3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .zoomable__wrapper.nofilter {
@@ -102,7 +102,7 @@ strong.style2 {
 
 .zoomable__wrapper .zoomable__container {
   position: relative;
-  width: 99%;
+  width: 90%;
   margin: 0 auto;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -119,6 +119,7 @@ strong.style2 {
   .zoomable__wrapper .zoomable__container {
     padding: 30px;
     max-height: 700px;
+    max-width: 1000px;
   }
 }
 
@@ -126,8 +127,8 @@ strong.style2 {
   position: absolute;
   top: -12px;
   right: -12px;
-  width: 65px;
-  height: 65px;
+  width: 40px;
+  height: 40px;
   background-color: #F3732A;
   color: #fff4ec;
   border-radius: 100%;
@@ -137,8 +138,8 @@ strong.style2 {
 .zoomable__wrapper .zoomable__container > .zoomable__close-btn::after {
   content: "x";
   position: absolute;
-  font-size: 45px;
-  margin-top: -4px;
+  font-size: 30px;
+  margin-top: -2px;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -161,7 +162,7 @@ strong.style2 {
 
 .zoomable__wrapper .zoomable__container > .zoomable__descr {
   display: block;
-  margin-top: 0.2em;
+  margin-top: 0.3em;
   width: 100%;
   text-align: center;
 }
@@ -531,7 +532,7 @@ a {
 }
 
 .project-description-area .pattern-bg > img {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 @media screen and (min-width: 992px) {
@@ -1077,7 +1078,7 @@ a {
     padding-bottom: 0px;
   }
   .why-choose-area .why-choose-title::before {
-    opacity: .6;
+    opacity: 0.6;
   }
 }
 
