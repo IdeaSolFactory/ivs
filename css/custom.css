@@ -102,7 +102,7 @@ strong.style2 {
 
 .zoomable__wrapper .zoomable__container {
   position: relative;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -110,7 +110,7 @@ strong.style2 {
   min-height: 1px;
   max-height: 100vh;
   background-color: white;
-  padding: 15px;
+  padding: 5px;
   -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
 }
@@ -125,10 +125,10 @@ strong.style2 {
 
 .zoomable__wrapper .zoomable__container > .zoomable__close-btn {
   position: absolute;
-  top: -12px;
-  right: -12px;
-  width: 40px;
-  height: 40px;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
   background-color: #F3732A;
   color: #fff4ec;
   border-radius: 100%;
@@ -138,12 +138,25 @@ strong.style2 {
 .zoomable__wrapper .zoomable__container > .zoomable__close-btn::after {
   content: "x";
   position: absolute;
-  font-size: 30px;
-  margin-top: -2px;
+  font-size: 20px;
+  margin-top: -1px;
   top: 50%;
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width: 992px) {
+  .zoomable__wrapper .zoomable__container > .zoomable__close-btn {
+    width: 45px;
+    height: 45px;
+    top: -12px;
+    right: -12px;
+  }
+  .zoomable__wrapper .zoomable__container > .zoomable__close-btn::after {
+    font-size: 30px;
+    margin-top: -2px;
+  }
 }
 
 .zoomable__wrapper .zoomable__container > .zoomable__image {
