@@ -18,6 +18,7 @@
  */ 
 
 $(document).ready(function () {
+
     Zoomable();
 
     function Zoomable() {
@@ -36,6 +37,17 @@ $(document).ready(function () {
             useBgFilter: true,
             imageDesc: true
         }
+
+        // Associate every zoomable gallery/image with a number
+        var zoomableGalleries = [];
+        var zoomableImgs = [];
+
+        $("." + Options.galleryClass).each(function( index ){
+            $(this).data("galleryNum", index);
+            $(this).find("." + Options.class).each(function(index){
+                $(this).data("imageNum", index);
+            });
+        });
     
         var isZoomed = false;
     
@@ -54,15 +66,15 @@ $(document).ready(function () {
 
             // CanSwipe
             // Needs to be restructured!!!
-            if (Options.canSwipe){
-                var numOfImages = $("." + Options.galleryClass).find("." + Options.class).length;
+            // if (Options.canSwipe){
+            //     var numOfImages = $("." + Options.galleryClass).find("." + Options.class).length;
                 
-                var galleryItems = [];
-                    for(var i = 0; i < numOfImages; i++){
-                        galleryItems[i] = ($("." + Options.galleryClass).find("." + Options.class)[i]);
-                        console.log(galleryItems[i]);
-                    }
-            }
+            //     var galleryItems = [];
+            //         for(var i = 0; i < numOfImages; i++){
+            //             galleryItems[i] = ($("." + Options.galleryClass).find("." + Options.class)[i]);
+            //             console.log(galleryItems[i]);
+            //         }
+            // }
     
             if (Options.useBgFilter == false) {
                 finalWrapperClass = Options.wrapperClass + " nofilter";
