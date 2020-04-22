@@ -1260,22 +1260,72 @@ a {
 }
 
 //Testimonials
-.testimonial-area {
-    .single-testimonial-item {
-        .quote-icon {
-            background-color: color(primary);
-        }
-        .client-info {
-            padding: 0 36px;
-        }
-        .img-box {
-            display: none;
+
+    // Testimonials V1
+    // .testimonial-area {
+    //     .single-testimonial-item {
+    //         .quote-icon {
+    //             background-color: color(primary);
+    //         }
+    //         .client-info {
+    //             padding: 0 36px;
+    //         }
+    //         .img-box {
+    //             display: none;
+    //         }
+    //     }
+    //     &.testimonial-index {
+    //         padding-bottom: 110px;
+    //     }
+    // }
+
+    // Testimonials V2
+    .testimonial-area-slider{
+        .owl-carousel.owl-theme{
+            
+            .single-testimonial-style2:hover{
+                .static-content{
+                    opacity: 1 !important;
+                    transform: translate(0%) !important;
+                }
+                .overlay-content{
+                    opacity: 0 !important;
+                }
+            }
+            .owl-item{
+                &.active{
+
+                    .static-content{
+                        opacity: 1 !important;
+                        transform: translate(0%) !important;
+                    }
+
+                    .overlay-content{
+                        opacity: 0 !important;
+                    }
+                }
+
+                .static-content{
+                    .quote-icon > .icon-quote3::before{
+                        color: color(primary);
+                    }
+
+                    .client-info{
+                        p{                            
+                            &:not(:last-of-type){margin-bottom: 0;}
+                            line-height: 140%;
+                        }                        
+                    }
+                }
+            }
+
+            .owl-dots > .owl-dot.active{
+                background-color: color(primary);
+                border-color: color(primary);
+                background: color(primary);               
+            }
         }
     }
-    &.testimonial-index {
-        padding-bottom: 110px;
-    }
-}
 
 // Recently Project
 .recently-project-area {
