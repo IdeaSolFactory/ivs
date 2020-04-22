@@ -63,7 +63,7 @@ $(document).ready(function () {
                 var imagePath = $("." + Options.class, this).data(Options.dataReference);
                 var imageName = selectedImgPath.split('/').pop();
                 var imageSize;
-                var imageDescription = null;
+                var imageDescription = "";
     
                 // Get relative image path if "Projects" project-path is given
                 if (imagePath == "projects") {
