@@ -1,8 +1,8 @@
 /**
  * Zoomable.js
  * Version: 1.0 | 22/04/2020 
- * Author: Gábor Tamási
- * Email: tamasi@isf.hu
+ * Author: ISF
+ * Email:
  * 
  * =======================================================
  * Description: 
@@ -23,6 +23,7 @@ $(document).ready(function () {
     function Zoomable() {
 
         var Options = {
+            galleryClass: "zoomable-gallery",
             containerClass: "has-zoomable",
             wrapperClass: "zoomable__wrapper",
             imageContainerClass: "zoomable__container",
@@ -31,6 +32,7 @@ $(document).ready(function () {
             dataReference: "image-path",
             pathToPicsRoot: "images/",
             picSizes: [480, 768, 1024, 1680, 1920],
+            canSwipe: true,
             useBgFilter: true,
             imageDesc: true
         }
@@ -49,6 +51,18 @@ $(document).ready(function () {
             var finalWrapperClass;
             var selectedImage = $("." + Options.class, this); // Selected image
             var selectedImageAlt = selectedImage.attr("alt");
+
+            // CanSwipe
+            // Needs to be restructured!!!
+            if (Options.canSwipe){
+                var numOfImages = $("." + Options.galleryClass).find("." + Options.class).length;
+                
+                var galleryItems = [];
+                    for(var i = 0; i < numOfImages; i++){
+                        galleryItems[i] = ($("." + Options.galleryClass).find("." + Options.class)[i]);
+                        console.log(galleryItems[i]);
+                    }
+            }
     
             if (Options.useBgFilter == false) {
                 finalWrapperClass = Options.wrapperClass + " nofilter";
@@ -140,5 +154,9 @@ $(document).ready(function () {
         var path = imageRoot + imagePath + "/" + imageSize + "/" + imageName;
         return path;
     }
+
+    // function GetCurrentGalleryElements(obj, parentClass){   
+    //     var gallery = ($(obj).closest("." + parentClass));
+    // }
 });
 
