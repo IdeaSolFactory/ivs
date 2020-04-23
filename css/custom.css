@@ -893,6 +893,78 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .main-slider .slide-one .tp-bgimg {
+    background-image: url(../images/references/puskas/768/ivs_referencia_puskas09.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-slider .slide-one .tp-bgimg {
+    background-image: url(../images/references/puskas/1024/ivs_referencia_puskas09.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-slider .slide-one .tp-bgimg {
+    background-image: url(../images/references/puskas/1680/ivs_referencia_puskas09.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-slider .slide-one .tp-bgimg {
+    background-image: url(../images/references/puskas/1920/ivs_referencia_puskas09.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-slider .slide-two .tp-bgimg {
+    background-image: url(../images/references/pecsi/768/ivs_referencia_kodaly_pecs11.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-slider .slide-two .tp-bgimg {
+    background-image: url(../images/references/pecsi/1024/ivs_referencia_kodaly_pecs11.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-slider .slide-two .tp-bgimg {
+    background-image: url(../images/references/pecsi/1680/ivs_referencia_kodaly_pecs11.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-slider .slide-two .tp-bgimg {
+    background-image: url(../images/references/pecsi/1920/ivs_referencia_kodaly_pecs11.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-slider .slide-three .tp-bgimg {
+    background-image: url(../images/references/aquaworld/768/ivs_referencia_aquaworld04.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-slider .slide-three .tp-bgimg {
+    background-image: url(../images/references/aquaworld/1024/ivs_referencia_aquaworld04.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-slider .slide-three .tp-bgimg {
+    background-image: url(../images/references/aquaworld/1680/ivs_referencia_aquaworld04.JPG) !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-slider .slide-three .tp-bgimg {
+    background-image: url(../images/references/aquaworld/1920/ivs_referencia_aquaworld04.JPG) !important;
+  }
+}
+
 .main-slider .rev_slider .active-revslide .bg-filter {
   opacity: 1;
   -webkit-transition: all 1s;
