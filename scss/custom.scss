@@ -1268,6 +1268,24 @@ a {
     padding-top: $padding-huge;
     padding-bottom: $padding-huge;
     position: relative;
+    background-image: url(../images/resources/why-choose-us-section/480/why-choose-us-01.jpg);
+
+    @include mqTablet{
+        background-image: url(../images/resources/why-choose-us-section/768/why-choose-us-01.jpg);
+    }
+
+    @include mqMediumScreen{
+        background-image: url(../images/resources/why-choose-us-section/1024/why-choose-us-01.jpg);
+    }
+
+    @include mqLargeScreen{
+        background-image: url(../images/resources/why-choose-us-section/1680/why-choose-us-01.jpg);
+    }
+
+    @include mqHDScreen{
+        background-image: url(../images/resources/why-choose-us-section/1920/why-choose-us-01.jpg);
+    }
+  
 
     &::before {
         content: "";

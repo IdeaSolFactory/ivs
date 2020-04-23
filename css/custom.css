@@ -1171,6 +1171,31 @@ a {
   padding-top: 160px;
   padding-bottom: 160px;
   position: relative;
+  background-image: url(../images/resources/why-choose-us-section/480/why-choose-us-01.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  .why-choose-area {
+    background-image: url(../images/resources/why-choose-us-section/768/why-choose-us-01.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .why-choose-area {
+    background-image: url(../images/resources/why-choose-us-section/1024/why-choose-us-01.jpg);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .why-choose-area {
+    background-image: url(../images/resources/why-choose-us-section/1680/why-choose-us-01.jpg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .why-choose-area {
+    background-image: url(../images/resources/why-choose-us-section/1920/why-choose-us-01.jpg);
+  }
 }
 
 .why-choose-area::before {
