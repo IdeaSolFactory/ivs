@@ -510,6 +510,14 @@ a {
                   BREADCRUMB AREAS
 ====================================================*/
 .breadcrumb-area {
+
+    //Variants
+    &.style2.darker{
+        &::after{
+            background-color: rgba($color: #000000, $alpha: 0.7)
+        }
+    }
+
     //General
     .inner-content-box {
         > .title-s2 {
@@ -525,57 +533,112 @@ a {
                 color: color(primary);
             }
         }
-    }
+    }   
 
-    //Technology
+    //Technology Page
     &.breadcrumb-technology {
-        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+        background-image: url(../images/references/aquaworld/480/ivs_referencia_aquaworld04.JPG);
 
         @include mqTablet {
-            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+            background-image: url(../images/references/aquaworld/768/ivs_referencia_aquaworld04.JPG);
         }
 
         @include mqMediumScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+            background-image: url(../images/references/aquaworld/1024/ivs_referencia_aquaworld04.JPG);
         }
 
         @include mqLargeScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+            background-image: url(../images/references/aquaworld/1680/ivs_referencia_aquaworld04.JPG);
         }
+
+        @include mqHDScreen {
+            background-image: url(../images/references/aquaworld/1920/ivs_referencia_aquaworld04.JPG);
+        } 
     }
 
-    //About us
+    //About us Page
     &.breadcrumb-aboutus {
-        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+        background-image: url(../images/references/ute/480/ivs_referencia_ute08.JPG);
 
         @include mqTablet {
-            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+            background-image: url(../images/references/ute/768/ivs_referencia_ute08.JPG);
         }
 
         @include mqMediumScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+            background-image: url(../images/references/ute/1024/ivs_referencia_ute08.JPG);
         }
 
         @include mqLargeScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+            background-image: url(../images/references/ute/1680/ivs_referencia_ute08.JPG);
+        }
+
+        @include mqHDScreen {
+            background-image: url(../images/references/ute/1920/ivs_referencia_ute08.JPG);
+        } 
+    }
+
+    //References Page
+    &.breadcrumb-references {
+        background-image: url(../images/references/pecsi/480/ivs_referencia_kodaly_pecs08.JPG);
+
+        @include mqTablet {
+            background-image: url(../images/references/pecsi/768/ivs_referencia_kodaly_pecs08.JPG);
+        }
+
+        @include mqMediumScreen {
+            background-image: url(../images/references/pecsi/1024/ivs_referencia_kodaly_pecs08.JPG);
+        }
+
+        @include mqLargeScreen {
+            background-image: url(../images/references/pecsi/1680/ivs_referencia_kodaly_pecs08.JPG);
+        }
+
+        @include mqHDScreen {
+            background-image: url(../images/references/pecsi/1920/ivs_referencia_kodaly_pecs08.JPG);
+        }        
+    }
+
+    // Products Page
+    &.breadcrumb-products{
+        background-image: url(../images/references/puskas/480/ivs_referencia_puskas09.JPG);
+
+        @include mqTablet {
+            background-image: url(../images/references/puskas/768/ivs_referencia_puskas09.JPG);
+        }
+
+        @include mqMediumScreen {
+            background-image: url(../images/references/puskas/1024/ivs_referencia_puskas09.JPG);
+        }
+
+        @include mqLargeScreen {
+            background-image: url(../images/references/puskas/1680/ivs_referencia_puskas09.JPG);
+        }
+
+        @include mqHDScreen {
+            background-image: url(../images/references/puskas/1920/ivs_referencia_puskas09.JPG);
         }
     }
 
-    //References
-    &.breadcrumb-references {
-        background-image: url(../images/projects/pecsi_kodaly/480/VONALSUGARZO_Kodaly_Pecs_004_480px.jpg);
+    // Applications Page
+    &.breadcrumb-applications{
+        background-image: url(../images/references/keleti/480/ivs_referencia_keletipalyaudvar14.JPG);
 
         @include mqTablet {
-            background-image: url(../images/projects/pecsi_kodaly/768/VONALSUGARZO_Kodaly_Pecs_004_768px.jpg);
+            background-image: url(../images/references/keleti/768/ivs_referencia_keletipalyaudvar14.JPG);
         }
 
         @include mqMediumScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1024/VONALSUGARZO_Kodaly_Pecs_004_1024px.jpg);
+            background-image: url(../images/references/keleti/1024/ivs_referencia_keletipalyaudvar14.JPG);
         }
 
         @include mqLargeScreen {
-            background-image: url(../images/projects/pecsi_kodaly/1680/VONALSUGARZO_Kodaly_Pecs_004_1680px.jpg);
+            background-image: url(../images/references/keleti/1680/ivs_referencia_keletipalyaudvar14.JPG);
         }
+
+        @include mqHDScreen {
+            background-image: url(../images/references/keleti/1920/ivs_referencia_keletipalyaudvar14.JPG);
+        }
+
     }
 }
 
