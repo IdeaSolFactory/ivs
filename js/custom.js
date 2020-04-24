@@ -125,7 +125,7 @@ function searchbox() {
 // ===Prealoder===
 function prealoader() {
     if($('.preloader').length){
-        $('.preloader').delay(200).fadeOut(500);
+        $('.preloader').delay(50).fadeOut(100);
     }
 }
 
@@ -1009,18 +1009,18 @@ jQuery(document).on('ready', function () {
         mainmenu ();
         scrollToTop ();
         languageSwitcher ();
-        searchbox ();
-        CounterNumberChanger ();
-        singleProductTab ();
+        // searchbox ();
+        // CounterNumberChanger ();
+        // singleProductTab ();
         priceFilter ();
         accordion ();
-        cartTouchSpin ();
+        // cartTouchSpin ();
         selectDropdown ();
-        datepicker ();
-        timepicker ();
-        tooltip ();
-        countryInfo ();
-        countDownTimer ();
+        // datepicker ();
+        // timepicker ();
+        // tooltip ();
+        // countryInfo ();
+        // countDownTimer ();
         
         aboutCarousel ();
         projectCarousel();
@@ -1063,4 +1063,4 @@ jQuery(window).on('load', function() {
 
 
 
-$(window).enllax();
+// $(window).enllax();
