@@ -31,7 +31,7 @@
 ****************************************************************************************************************/
 
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
@@ -47,25 +47,21 @@
 @import url(owl.min.css);
 @import url(owl.theme.default.min.css);
 
-@import url(../fonts/flaticon/flaticon.css);
+@import url(../fonts/flaticon/flaticon.css); */
 /*** Price filter***/
-@import url(../assets/price-filter/nouislider.css);
-@import url(../assets/price-filter/nouislider.pips.css);
+/* @import url(../assets/price-filter/nouislider.css);
+@import url(../assets/price-filter/nouislider.pips.css); */
 /*** Time picker css ***/
-@import url(../assets/timepicker/timePicker.css);
+/* @import url(../assets/timepicker/timePicker.css); */
 /*** jquery ui css ***/
-@import url(../assets/jquery-ui-1.11.4/jquery-ui.css);
+/* @import url(../assets/jquery-ui-1.11.4/jquery-ui.css); */
 /*** Revolution slider ***/
-@import url(../plugins/revolution/css/settings.css);
+/* @import url(../plugins/revolution/css/settings.css);
 @import url(../plugins/revolution/css/layers.css);
-@import url(../plugins/revolution/css/navigation.css);
+@import url(../plugins/revolution/css/navigation.css); */
 /*** Language Switcher ***/
-@import url(../assets/language-switcher/polyglot-language-switcher.css);
-@import url(../plugins/energy-icon/style.css);
-
-
-
-
+/* @import url(../assets/language-switcher/polyglot-language-switcher.css);
+@import url(../plugins/energy-icon/style.css); */
 
 
 /*==============================================
@@ -13025,11 +13021,3 @@ li .single-footer-contact-info .text p span{
 .timer-box .subscribe-box .text p span{
     font-weight: 600;
 }
-
-
-
-
-
-
-
-
