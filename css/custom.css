@@ -35,6 +35,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.pattern-bg.light > img {
+  opacity: 0.2;
+}
+
 strong {
   color: #565963;
 }
@@ -620,10 +624,6 @@ a {
   .project-description-area {
     padding-bottom: 75px;
   }
-}
-
-.project-description-area .pattern-bg > img {
-  opacity: 0.2;
 }
 
 @media screen and (min-width: 992px) {

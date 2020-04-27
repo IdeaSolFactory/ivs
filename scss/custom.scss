@@ -47,6 +47,13 @@ body {
     scroll-behavior: smooth;
 }
 
+// ASSETS
+    .pattern-bg.light {
+        > img {
+            opacity: 0.2;
+        }
+    }
+
 // TEXT
 
 // Text transforms
@@ -671,12 +678,6 @@ a {
 
     @include mqSmallScreen {
         padding-bottom: $padding-medium;
-    }
-
-    .pattern-bg {
-        > img {
-            opacity: 0.2;
-        }
     }
 
     .project-description-content {
