@@ -27,7 +27,7 @@
 /*** Language Switcher ***/
 @import url(../assets/language-switcher/polyglot-language-switcher.css);
 @import url(../plugins/energy-icon/style.css);
-@import url(style.min.css);
+@import url("style.min.css");
 /*==================================================
                 GENERAL FORMATTING
 ====================================================*/
