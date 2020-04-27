@@ -1618,16 +1618,32 @@ a {
             //     background: rgba($color: color(darkgrey-accent), $alpha: .35);
             // }
 
-            .similar-projects-content {
-                .similar-project-title > h2 {
-                    color: white;
-                }
-                .title-holder {
-                    h3,
-                    h3 > a {
-                        color: white;
+            .similar-projects-content {   
+                
+                .sec-title{
+                    >h2{color: white}
+                    >p{color: white}
+                    float: none !important;
+                    padding-bottom: 24px;
+
+                    @include mqTablet{
+                        float: left !important;
+                        padding-bottom: 50px;
                     }
+                } 
+                
+                .more-project-button{
+                    margin-top: 0;
                 }
+
+                .single-simiar-project{
+                    .title-holder {
+                        h3,
+                        h3 > a {
+                            color: white;
+                        }
+                    }
+                } // #end of single-similar-project
             }
         }
     }
