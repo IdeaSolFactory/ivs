@@ -1082,14 +1082,29 @@ a {
 .products-overview-area .single-service-style2 .img-holder {
   position: relative;
   overflow: hidden;
-  max-height: 250px;
-  min-height: 250px;
+}
+
+@media screen and (min-width: 768px) {
+  .products-overview-area .single-service-style2 .img-holder {
+    min-height: 370px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .products-overview-area .single-service-style2 .img-holder {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+  }
 }
 
 .products-overview-area .single-service-style2 .img-holder > img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  top: 0;
+  left: 0;
+  height: auto;
   width: 100%;
 }
 
