@@ -584,22 +584,22 @@ a {
 
         //IVS H Hiperkardioid
         &.ivshhiperkardioid{
-            background-image: url(../images/products/vonalsugarzo/480/ivs_vonalsugarzo05.JPG);
+            background-image: url(../images/products/vonalsugarzo/ivs-h-hiperkardioid/480/ivs_vonalsugarzo05.JPG);
             
             @include mqTablet{
-                background-image: url(../images/products/vonalsugarzo/768/ivs_vonalsugarzo05.JPG);
+                background-image: url(../images/products/vonalsugarzo/ivs-h-hiperkardioid/768/ivs_vonalsugarzo05.JPG);
             }
 
             @include mqSmallScreen{
-                background-image: url(../images/products/vonalsugarzo/1024/ivs_vonalsugarzo05.JPG);;
+                background-image: url(../images/products/vonalsugarzo/ivs-h-hiperkardioid/1024/ivs_vonalsugarzo05.JPG);;
             }
 
             @include mqMediumScreen{
-                background-image: url(../images/products/vonalsugarzo/1680/ivs_vonalsugarzo05.JPG);
+                background-image: url(../images/products/vonalsugarzo/ivs-h-hiperkardioid/1680/ivs_vonalsugarzo05.JPG);
             }
 
             @include mqHDScreen{
-                background-image: url(../images/products/vonalsugarzo/1920/ivs_vonalsugarzo05.JPG);;
+                background-image: url(../images/products/vonalsugarzo/ivs-h-hiperkardioid/1920/ivs_vonalsugarzo05.JPG);;
             }
         }
     }
