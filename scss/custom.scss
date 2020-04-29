@@ -801,7 +801,10 @@ a {
     .services-links,
     .usefull-links {
         ul > li {
-            > a {
+             a {
+                
+                display: block;
+
                 &::before {
                     color: color(primary);
                 }
@@ -814,16 +817,30 @@ a {
             }
 
             &.dropdown {
-                @include LinkSelectorReact {
-                    > ul {
-                        display: block;
+                // @include LinkSelectorReact {
+                //     > ul {                        
+                //         display: block;                       
+                //     }
+                // }
+
+                >input{
+                    display:none;
+
+                    &:checked~ul.submenu{
+                        display:block;
                     }
                 }
 
-                > ul {
+                >label{
+                    position: relative;
+                    display: block;
+                    cursor: pointer;
+                }
+
+                > ul {                                      
                     display: none;
 
-                    > li {
+                    > li {                       
                         padding-top: $padding-text-xxs;
                         border-bottom: none;
                         line-height: 35px;
