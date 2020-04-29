@@ -1205,6 +1205,7 @@ a {
 }
 .project-description-area.product-description-area,
 .project-info-area.product-info-area,
+.technology-description-area,
 .about-us-description-area {
     .img-holder {
         width: 100%;
@@ -1262,7 +1263,8 @@ a {
     }
 }
 
-.about-us-description-area {
+.about-us-description-area,
+.technology-description-area {
     .img-holder {
         overflow: hidden;
         float: none;

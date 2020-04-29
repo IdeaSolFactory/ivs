@@ -1116,6 +1116,7 @@ a {
 
 .project-description-area.product-description-area .img-holder,
 .project-info-area.product-info-area .img-holder,
+.technology-description-area .img-holder,
 .about-us-description-area .img-holder {
   width: 100%;
   position: relative;
@@ -1126,6 +1127,7 @@ a {
 @media screen and (min-width: 1200px) {
   .project-description-area.product-description-area .img-holder,
   .project-info-area.product-info-area .img-holder,
+  .technology-description-area .img-holder,
   .about-us-description-area .img-holder {
     max-height: unset;
   }
@@ -1133,6 +1135,7 @@ a {
 
 .project-description-area.product-description-area .img-holder > img,
 .project-info-area.product-info-area .img-holder > img,
+.technology-description-area .img-holder > img,
 .about-us-description-area .img-holder > img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1178,14 +1181,16 @@ a {
   display: block;
 }
 
-.about-us-description-area .img-holder {
+.about-us-description-area .img-holder,
+.technology-description-area .img-holder {
   overflow: hidden;
   float: none;
   position: relative;
 }
 
 @media screen and (min-width: 1200px) {
-  .about-us-description-area .img-holder {
+  .about-us-description-area .img-holder,
+  .technology-description-area .img-holder {
     float: right;
     width: 795px;
     height: 540px;
