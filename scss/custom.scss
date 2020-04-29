@@ -857,6 +857,12 @@ a {
             }
         }
     }
+
+    .usefull-links{
+        .submenu li:first-of-type{
+            padding-top: 0 !important;
+        }
+    }
 }
 
 // Footer -- INDEX

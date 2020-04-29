@@ -792,6 +792,10 @@ a {
   content: none;
 }
 
+.single-footer-widget .usefull-links .submenu li:first-of-type {
+  padding-top: 0 !important;
+}
+
 .footer-area,
 .footer-area.style4 {
   background-color: #27282c;
