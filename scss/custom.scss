@@ -265,6 +265,9 @@ strong.style2 {
 
 a {
     color: color(primary);
+    &:hover{
+        color: color(primary);
+    }
 }
 
 .sec-title {
@@ -1798,3 +1801,23 @@ a {
     margin-top: 110px;
     padding: 110px 0 50px;
 }
+
+// Products Page
+
+.products-selection{
+    .single-project-style4{
+
+        .img-holder .overlay-content .title h3 a:hover{
+            color: color(primary) !important;
+        } 
+        
+        .overlay-box .box .link a:hover span:before{
+            color: color(primary);
+        }
+       
+    }
+
+}
+
+    
+

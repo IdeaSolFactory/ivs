@@ -260,6 +260,10 @@ a {
   color: #F3732A;
 }
 
+a:hover {
+  color: #F3732A;
+}
+
 .sec-title p {
   color: #F3732A;
 }
@@ -1673,5 +1677,13 @@ a {
   display: block;
   margin-top: 110px;
   padding: 110px 0 50px;
+}
+
+.products-selection .single-project-style4 .img-holder .overlay-content .title h3 a:hover {
+  color: #F3732A !important;
+}
+
+.products-selection .single-project-style4 .overlay-box .box .link a:hover span:before {
+  color: #F3732A;
 }
 /*# sourceMappingURL=custom.css.map */
