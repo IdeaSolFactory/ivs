@@ -24,7 +24,7 @@ $(document).ready(function () {
 
         var Options = {
             galleryClass: "zoomable-gallery",
-            containerClass: "has-zoomable",
+            containerClass: "",
             wrapperClass: "zoomable__wrapper",
             imageContainerClass: "zoomable__container",
             imageClass: "zoomable__image",
@@ -70,7 +70,7 @@ $(document).ready(function () {
                 finalWrapperClass = Options.wrapperClass;
             }
     
-            if ($(".has-zoomable img").hasClass(Options.class) && isZoomed == false) {
+            if ($(". img").hasClass(Options.class) && isZoomed == false) {
                 var selectedImgPath = $(selectedImage).attr('src');
     
                 // Get info from data attributes
