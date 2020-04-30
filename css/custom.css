@@ -772,6 +772,7 @@ a:hover {
   position: relative;
   display: block;
   cursor: pointer;
+  margin-bottom: 0;
 }
 
 .single-footer-widget .services-links ul > li.dropdown > ul,
