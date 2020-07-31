@@ -868,6 +868,11 @@ a {
                         a::before {
                             content: none;
                         }
+                    } 
+                    
+                    &.submenu{
+                        padding-top: 12px;
+                        padding-bottom: 16px;
                     }
                 }
             }

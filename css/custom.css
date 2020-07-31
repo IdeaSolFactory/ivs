@@ -804,6 +804,12 @@ a:hover {
   content: none;
 }
 
+.single-footer-widget .services-links ul > li.dropdown > ul.submenu,
+.single-footer-widget .usefull-links ul > li.dropdown > ul.submenu {
+  padding-top: 12px;
+  padding-bottom: 16px;
+}
+
 .single-footer-widget .usefull-links .submenu li:first-of-type {
   padding-top: 0 !important;
 }
