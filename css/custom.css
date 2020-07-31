@@ -837,6 +837,10 @@ a:hover {
   max-height: 50px;
 }
 
+.footer-area .single-footer-widget .title-style2 {
+  padding-bottom: 12px;
+}
+
 .footer-area .single-footer-widget .contact-info-box > ul > li {
   vertical-align: middle;
   padding-bottom: 15px;
@@ -921,6 +925,20 @@ a:hover {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
+}
+
+.footer-area.style4 .title-style2 {
+  padding-top: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-area.style4 .title-style2 {
+    padding-top: 0;
+  }
+}
+
+.footer-area.style4 .usefull-links {
+  padding: 12px 0;
 }
 
 .footer-area.style4 .footer-logo > a > img {

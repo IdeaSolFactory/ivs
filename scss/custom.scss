@@ -913,6 +913,11 @@ a {
     }
 
     .single-footer-widget {
+
+        .title-style2{
+            padding-bottom: 12px;
+        }
+
         .contact-info-box {
             > ul > li {
                 vertical-align: middle;
@@ -1003,9 +1008,24 @@ a {
 
 // Footer -- Subpages
 .footer-area.style4 {
+
+    .title-style2{
+        padding-top: 12px;
+
+        @include mqMediumScreen{
+            padding-top: 0;
+        }
+    }
+
+    .usefull-links{
+        padding: 12px 0;
+    }
+
     .footer-logo > a > img {
         max-height: 36px;
     }
+
+
 }
 
 .footer-bottom-area.style3 {
